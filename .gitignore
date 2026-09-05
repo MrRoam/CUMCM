@@ -1,0 +1,66 @@
+# 操作系统
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 编辑器与本地工作区
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 密钥与本地环境
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.json
+
+# Python 与 Jupyter
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# MATLAB
+*.asv
+*.m~
+slprj/
+codegen/
+
+# LaTeX 中间文件
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+paper/*.out
+paper/**/*.out
+*.synctex.gz
+*.toc
+
+# Office 临时与锁文件
+~$*
+*.tmp
+*.temp
+
+# 日志、缓存与临时目录
+*.log
+.cache/
+cache/
+tmp/
+temp/
+
+# 本地打包暂存区
+.staging/
