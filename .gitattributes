@@ -1,0 +1,44 @@
+# 自动识别文本；常见文本文件在仓库中统一使用 LF。
+* text=auto
+*.md text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
+*.tsv text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.ini text eol=lf
+*.py text eol=lf
+*.m text eol=lf
+*.tex text eol=lf
+*.bib text eol=lf
+*.r text eol=lf
+*.R text eol=lf
+*.jl text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Office、PDF、压缩包、图片和常见科学数据文件按二进制处理。
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.xlsm binary
+*.ppt binary
+*.pptx binary
+*.pdf binary
+*.zip binary
+*.rar binary
+*.7z binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.tif binary
+*.tiff binary
+*.mat binary
+*.fig binary
