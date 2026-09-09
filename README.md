@@ -33,7 +33,7 @@ CUMCM/
 
 - `inputs/official/` 永远保持官方原件，不在原文件上清洗、改名或覆盖。
 - `inputs/external/` 只放建模实际使用的外部数据，并记录来源。
-- `experiments/` 允许快速试错，但其中的结果不能直接作为论文正式依据。
+- `experiments/` 允许快速试错，但其中的结果不能直接作为论文正式依据。 目录与产物规则见[实验规范](docs/experiment_rules.md)，已有实验见[实验索引](experiments/README.md)。
 - `src/` 是正式计算的唯一代码来源，使用仓库相对路径，并将结果写入 `outputs/`。
 - `outputs/` 中用于论文的图、表和数字必须能由代码重新生成，不手工修改。
 - `paper/` 只维护一份权威正文，不同时维护 Word 和 LaTeX 两套正式版本。
