@@ -1,0 +1,237 @@
+{
+  "status": "探索性多指标比较，非连续最坏值证明，非官方成绩",
+  "definitions": {
+    "feasible": "max distance to initial outer polygon <= 1000 m",
+    "average_models": [
+      "area-uniform",
+      "radial-uniform"
+    ],
+    "sample_worst": "maximum over endpoint grid; lower bound on continuous worst case",
+    "blend": "weighted normalized relative loss; mean component averages area and radial relative losses"
+  },
+  "search": {
+    "coarse_step_m": 25.0,
+    "coarse_candidates": 388,
+    "refinement_steps_m": [
+      10.0,
+      5.0,
+      2.0,
+      1.0,
+      0.5
+    ],
+    "training_samples": {
+      "area": 216,
+      "radial": 216,
+      "worst": 775
+    },
+    "evaluated_points": 588,
+    "training_normalizers": {
+      "area_mean_m": 30.53643168016312,
+      "radial_mean_m": 27.263644529255416,
+      "sample_worst_m": 55.4846595541184
+    }
+  },
+  "validation": {
+    "geometry_checks": {
+      "circle_special_cases": 3,
+      "scalar_clip_crosschecks": 54,
+      "max_circle_difference_m": 1.290319889650456e-09,
+      "mirror_max_difference_m": 3.4354741274000844e-12,
+      "arc_refinement_max_difference_m": 5.610029889524526e-05,
+      "truth_containment": "通过",
+      "randomness": "无；全部确定性网格"
+    },
+    "final_samples": {
+      "area": 92480,
+      "radial": 92480,
+      "worst": 86989
+    },
+    "all_feasible": true,
+    "arc_refinement": {
+      "checked_candidates": [
+        "area_mean",
+        "radial_mean",
+        "sample_worst",
+        "blend_w050"
+      ],
+      "sample_counts": {
+        "area": 1000,
+        "radial": 1000,
+        "worst": 1525
+      },
+      "max_metric_difference_m": {
+        "area": 3.5848832560247956e-06,
+        "radial": 1.6404176790274505e-06,
+        "worst": 9.947598300641403e-14
+      },
+      "ordering_unchanged": {
+        "area": true,
+        "radial": true,
+        "worst": true
+      }
+    }
+  },
+  "finalists": {
+    "area_mean": {
+      "point_m": [
+        870.0,
+        501.683285691
+      ],
+      "move_distance_m": 1004.2838837409059,
+      "move_seconds": 200.85677674818118,
+      "receive_max_distance_m": 999.9999999999518,
+      "area_mean_m": 30.505097973934735,
+      "area_p95_m": 52.43882929509119,
+      "area_radius_le20_fraction": 0.2409061418685121,
+      "radial_mean_m": 27.888620440013607,
+      "radial_p95_m": 49.58498413948701,
+      "radial_radius_le20_fraction": 0.24210640138408304,
+      "sample_worst_m": 55.673247210005634,
+      "sample_worst_source_m": [
+        1499.771542734587,
+        -26.178609655925268
+      ],
+      "sample_worst_error_deg": -1.0
+    },
+    "radial_mean": {
+      "point_m": [
+        788.5,
+        621.303562402
+      ],
+      "move_distance_m": 1003.8677037605185,
+      "move_seconds": 200.77354075210368,
+      "receive_max_distance_m": 1000.0000000000139,
+      "area_mean_m": 31.257284018720036,
+      "area_p95_m": 53.062878132866906,
+      "area_radius_le20_fraction": 0.24970804498269897,
+      "radial_mean_m": 27.141397807858315,
+      "radial_p95_m": 50.47397840433596,
+      "radial_radius_le20_fraction": 0.2937932525951557,
+      "sample_worst_m": 55.99321068735907,
+      "sample_worst_source_m": [
+        1499.771542734587,
+        -26.178609655925268
+      ],
+      "sample_worst_error_deg": -1.0
+    },
+    "sample_worst": {
+      "point_m": [
+        843.0,
+        545.581798557
+      ],
+      "move_distance_m": 1004.1456562255751,
+      "move_seconds": 200.829131245115,
+      "receive_max_distance_m": 999.9999999997273,
+      "area_mean_m": 30.607750282686744,
+      "area_p95_m": 52.38257730295671,
+      "area_radius_le20_fraction": 0.24662629757785468,
+      "radial_mean_m": 27.428071416439607,
+      "radial_p95_m": 49.645615583266355,
+      "radial_radius_le20_fraction": 0.26100778546712805,
+      "sample_worst_m": 55.4846595541184,
+      "sample_worst_source_m": [
+        1499.771542734587,
+        -26.178609655925268
+      ],
+      "sample_worst_error_deg": -1.0
+    },
+    "blend_w025": {
+      "point_m": [
+        834.5,
+        558.418321316
+      ],
+      "move_distance_m": 1004.1022216793365,
+      "move_seconds": 200.8204443358673,
+      "receive_max_distance_m": 1000.0000000001778,
+      "area_mean_m": 30.676863454487325,
+      "area_p95_m": 52.431879830558266,
+      "area_radius_le20_fraction": 0.24781574394463668,
+      "radial_mean_m": 27.336415666532446,
+      "radial_p95_m": 49.730180177941406,
+      "radial_radius_le20_fraction": 0.26645761245674743,
+      "sample_worst_m": 55.500054324779285,
+      "sample_worst_source_m": [
+        1499.771542734587,
+        -26.178609655925268
+      ],
+      "sample_worst_error_deg": -1.0
+    },
+    "blend_w050": {
+      "point_m": [
+        837.5,
+        553.93663823
+      ],
+      "move_distance_m": 1004.1175474881185,
+      "move_seconds": 200.8235094976237,
+      "receive_max_distance_m": 1000.0000000000641,
+      "area_mean_m": 30.65078591832687,
+      "area_p95_m": 52.41151501300268,
+      "area_radius_le20_fraction": 0.24745891003460208,
+      "radial_mean_m": 27.366320422912544,
+      "radial_p95_m": 49.69663532750254,
+      "radial_radius_le20_fraction": 0.2645112456747405,
+      "sample_worst_m": 55.491235831559784,
+      "sample_worst_source_m": [
+        1499.771542734587,
+        -26.178609655925268
+      ],
+      "sample_worst_error_deg": -1.0
+    },
+    "blend_w075": {
+      "point_m": [
+        840.0,
+        550.161525567
+      ],
+      "move_distance_m": 1004.1303223258467,
+      "move_seconds": 200.82606446516934,
+      "receive_max_distance_m": 1000.0000000001994,
+      "area_mean_m": 30.630436267416304,
+      "area_p95_m": 52.39709574327992,
+      "area_radius_le20_fraction": 0.24704801038062285,
+      "radial_mean_m": 27.393245871220486,
+      "radial_p95_m": 49.67292948897467,
+      "radial_radius_le20_fraction": 0.2629757785467128,
+      "sample_worst_m": 55.486662862217905,
+      "sample_worst_source_m": [
+        1499.771542734587,
+        -26.178609655925268
+      ],
+      "sample_worst_error_deg": -1.0
+    },
+    "minimax_regret": {
+      "point_m": [
+        832.0,
+        562.113538784
+      ],
+      "move_distance_m": 1004.089453427468,
+      "move_seconds": 200.8178906854936,
+      "receive_max_distance_m": 999.999999999999,
+      "area_mean_m": 30.699919304997163,
+      "area_p95_m": 52.45098384287085,
+      "area_radius_le20_fraction": 0.24806444636678202,
+      "radial_mean_m": 27.313425524254427,
+      "radial_p95_m": 49.75704747828368,
+      "radial_radius_le20_fraction": 0.26798226643598616,
+      "sample_worst_m": 55.510065607478865,
+      "sample_worst_source_m": [
+        1499.771542734587,
+        -26.178609655925268
+      ],
+      "sample_worst_error_deg": -1.0
+    }
+  },
+  "position_effects": {
+    "max_pairwise_distance_m": 144.74550286767536,
+    "area_to_worst_distance_m": 51.53716553950523,
+    "radial_to_worst_distance_m": 93.2954206796773
+  },
+  "code_sha256": {
+    "experiments\\q2_metric_tradeoff.py": "a770bfa257c8d07712c2293ef12f73b720da8581e35dfa511d06f4f483fea2bf",
+    "experiments\\q2_strategy_comparison.py": "9aef93fda397418f7d0efd99615df7a497e4fe68e69f395ca367dbfa9b70f6b2"
+  },
+  "runtime": {
+    "seconds": 126.16228240000783,
+    "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.4.4"
+  }
+}

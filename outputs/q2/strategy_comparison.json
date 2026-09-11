@@ -1,0 +1,343 @@
+{
+  "status": "探索性合成算例，非官方模拟器成绩，非全局最优证明",
+  "geometry": {
+    "S1": [
+      0,
+      0
+    ],
+    "theta1_deg": 0,
+    "sector_radius_m": 1500,
+    "inner_radius_m": 5,
+    "angle_error_deg": 1,
+    "target_radius_m": 1800,
+    "receive_rule": "max distance to outer polygon <=1000",
+    "arc_steps": 16,
+    "arc_outer_error_bound_m": 0.0008924342894678361,
+    "inner_convexification_error_m": 0.0007615242180436521
+  },
+  "validation": {
+    "circle_special_cases": 3,
+    "scalar_clip_crosschecks": 54,
+    "max_circle_difference_m": 1.290319889650456e-09,
+    "mirror_max_difference_m": 3.4354741274000844e-12,
+    "arc_refinement_max_difference_m": 5.610029889524526e-05,
+    "truth_containment": "通过",
+    "randomness": "无；全部确定性网格"
+  },
+  "runs": [
+    {
+      "distribution": "area",
+      "zero_error": false,
+      "optimization": {
+        "full": [
+          30.53643168016203,
+          [
+            870.0,
+            501.683285691096
+          ]
+        ],
+        "line_mean": [
+          32.12100658415417,
+          [
+            750.0,
+            635.5181741547544
+          ]
+        ],
+        "evaluations": 583,
+        "search_seconds": 29.721852399990894
+      },
+      "training_samples": 216,
+      "strategies": {
+        "A_angle_bisector": {
+          "point": [
+            750.0,
+            635.5181741547544
+          ],
+          "mean_radius_m": 32.09406327912488,
+          "p95_radius_m": 54.8780685270195,
+          "sample_max_radius_m": 57.88413525144561,
+          "radius_le20_fraction": 0.25848765432098764,
+          "move_distance_m": 983.0479895106814,
+          "move_seconds": 196.60959790213627,
+          "guaranteed_receive_max_distance_m": 1000.0,
+          "eval_seconds": 1.3523472000088077,
+          "sample_count": 12960,
+          "boundary_grid_max_radius_m": 57.88435392489344
+        },
+        "A_line_mean": {
+          "point": [
+            750.0,
+            635.5181741547544
+          ],
+          "mean_radius_m": 32.09406327912488,
+          "p95_radius_m": 54.8780685270195,
+          "sample_max_radius_m": 57.88413525144561,
+          "radius_le20_fraction": 0.25848765432098764,
+          "move_distance_m": 983.0479895106814,
+          "move_seconds": 196.60959790213627,
+          "guaranteed_receive_max_distance_m": 1000.0,
+          "eval_seconds": 1.3111243000021204,
+          "sample_count": 12960,
+          "boundary_grid_max_radius_m": 57.88435392489344
+        },
+        "B_plane_mean": {
+          "point": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.508018937955534,
+          "p95_radius_m": 52.4254422253165,
+          "sample_max_radius_m": 55.667479862727824,
+          "radius_le20_fraction": 0.24058641975308642,
+          "move_distance_m": 1004.2838837409539,
+          "move_seconds": 200.85677674819078,
+          "guaranteed_receive_max_distance_m": 1000.0,
+          "eval_seconds": 0.5998626999789849,
+          "sample_count": 12960,
+          "boundary_grid_max_radius_m": 55.67324721000072
+        }
+      }
+    },
+    {
+      "distribution": "radial",
+      "zero_error": false,
+      "optimization": {
+        "full": [
+          27.263656637799006,
+          [
+            788.0,
+            621.933483162453
+          ]
+        ],
+        "line_mean": [
+          27.411160197685188,
+          [
+            750.0,
+            635.5181741547544
+          ]
+        ],
+        "evaluations": 582,
+        "search_seconds": 19.80072939998354
+      },
+      "training_samples": 216,
+      "strategies": {
+        "A_angle_bisector": {
+          "point": [
+            750.0,
+            635.5181741547544
+          ],
+          "mean_radius_m": 27.286452607650723,
+          "p95_radius_m": 52.30625908484494,
+          "sample_max_radius_m": 57.8840817691949,
+          "radius_le20_fraction": 0.3287808641975309,
+          "move_distance_m": 983.0479895106814,
+          "move_seconds": 196.60959790213627,
+          "guaranteed_receive_max_distance_m": 1000.0,
+          "eval_seconds": 0.6818855000019539,
+          "sample_count": 12960,
+          "boundary_grid_max_radius_m": 57.88435392489344
+        },
+        "A_line_mean": {
+          "point": [
+            750.0,
+            635.5181741547544
+          ],
+          "mean_radius_m": 27.286452607650723,
+          "p95_radius_m": 52.30625908484494,
+          "sample_max_radius_m": 57.8840817691949,
+          "radius_le20_fraction": 0.3287808641975309,
+          "move_distance_m": 983.0479895106814,
+          "move_seconds": 196.60959790213627,
+          "guaranteed_receive_max_distance_m": 1000.0,
+          "eval_seconds": 0.6761433000210673,
+          "sample_count": 12960,
+          "boundary_grid_max_radius_m": 57.88435392489344
+        },
+        "B_plane_mean": {
+          "point": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 27.14449733230988,
+          "p95_radius_m": 50.48057157406095,
+          "sample_max_radius_m": 55.99622119235831,
+          "radius_le20_fraction": 0.2942901234567901,
+          "move_distance_m": 1003.8651590121958,
+          "move_seconds": 200.77303180243916,
+          "guaranteed_receive_max_distance_m": 1000.0,
+          "eval_seconds": 0.6189137999899685,
+          "sample_count": 12960,
+          "boundary_grid_max_radius_m": 56.001516108885774
+        }
+      }
+    },
+    {
+      "distribution": "area",
+      "zero_error": true,
+      "optimization": {
+        "full": [
+          30.570595002141815,
+          [
+            870.0,
+            501.683285691096
+          ]
+        ],
+        "line_mean": [
+          32.182867639912686,
+          [
+            750.0,
+            635.5181741547544
+          ]
+        ],
+        "evaluations": 583,
+        "search_seconds": 11.103049500001362
+      },
+      "training_samples": 72,
+      "strategies": {
+        "A_angle_bisector": {
+          "point": [
+            750.0,
+            635.5181741547544
+          ],
+          "mean_radius_m": 32.169360537681044,
+          "p95_radius_m": 54.856390242923,
+          "sample_max_radius_m": 57.86768348329447,
+          "radius_le20_fraction": 0.2548611111111111,
+          "move_distance_m": 983.0479895106814,
+          "move_seconds": 196.60959790213627,
+          "guaranteed_receive_max_distance_m": 1000.0,
+          "eval_seconds": 0.15950159999192692,
+          "sample_count": 1440,
+          "boundary_grid_max_radius_m": 57.88435392489344
+        },
+        "A_line_mean": {
+          "point": [
+            750.0,
+            635.5181741547544
+          ],
+          "mean_radius_m": 32.169360537681044,
+          "p95_radius_m": 54.856390242923,
+          "sample_max_radius_m": 57.86768348329447,
+          "radius_le20_fraction": 0.2548611111111111,
+          "move_distance_m": 983.0479895106814,
+          "move_seconds": 196.60959790213627,
+          "guaranteed_receive_max_distance_m": 1000.0,
+          "eval_seconds": 0.15462980000302196,
+          "sample_count": 1440,
+          "boundary_grid_max_radius_m": 57.88435392489344
+        },
+        "B_plane_mean": {
+          "point": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.562153515632573,
+          "p95_radius_m": 52.40938990996926,
+          "sample_max_radius_m": 55.64582198979986,
+          "radius_le20_fraction": 0.23819444444444443,
+          "move_distance_m": 1004.2838837409539,
+          "move_seconds": 200.85677674819078,
+          "guaranteed_receive_max_distance_m": 1000.0,
+          "eval_seconds": 0.07070079998811707,
+          "sample_count": 1440,
+          "boundary_grid_max_radius_m": 55.67324721000072
+        }
+      }
+    }
+  ],
+  "dense_local_recheck": {
+    "best": [
+      30.51183316985799,
+      [
+        870.0,
+        501.683285691096
+      ]
+    ],
+    "original_on_dense": 30.51183316985799,
+    "training_samples": 1600
+  },
+  "fine_evaluation": [
+    {
+      "distribution": "area",
+      "strategies": {
+        "A_angle_bisector": {
+          "point": [
+            750.0,
+            635.5181741547544
+          ],
+          "mean_radius_m": 32.092619962247625,
+          "p95_radius_m": 54.90718281852111,
+          "sample_max_radius_m": 57.88359202458157,
+          "radius_le20_fraction": 0.25805579584775085,
+          "move_distance_m": 983.0479895106814,
+          "move_seconds": 196.60959790213627,
+          "guaranteed_receive_max_distance_m": 1000.0,
+          "eval_seconds": 9.131425400002627,
+          "sample_count": 92480
+        },
+        "B_plane_mean": {
+          "point": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.505097973933612,
+          "p95_radius_m": 52.4388292950861,
+          "sample_max_radius_m": 55.67300417190814,
+          "radius_le20_fraction": 0.2409061418685121,
+          "move_distance_m": 1004.2838837409539,
+          "move_seconds": 200.85677674819078,
+          "guaranteed_receive_max_distance_m": 1000.0,
+          "eval_seconds": 4.042009099997813,
+          "sample_count": 92480
+        }
+      }
+    },
+    {
+      "distribution": "radial",
+      "strategies": {
+        "A_angle_bisector": {
+          "point": [
+            750.0,
+            635.5181741547544
+          ],
+          "mean_radius_m": 27.283486984554326,
+          "p95_radius_m": 52.293017642482795,
+          "sample_max_radius_m": 57.8827577157897,
+          "radius_le20_fraction": 0.32886029411764706,
+          "move_distance_m": 983.0479895106814,
+          "move_seconds": 196.60959790213627,
+          "guaranteed_receive_max_distance_m": 1000.0,
+          "eval_seconds": 5.086898300010944,
+          "sample_count": 92480
+        },
+        "B_plane_mean": {
+          "point": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 27.141485788928385,
+          "p95_radius_m": 50.4846703815321,
+          "sample_max_radius_m": 56.0013583621425,
+          "radius_le20_fraction": 0.2940635813148789,
+          "move_distance_m": 1003.8651590121958,
+          "move_seconds": 200.77303180243916,
+          "guaranteed_receive_max_distance_m": 1000.0,
+          "eval_seconds": 4.454507399990689,
+          "sample_count": 92480
+        }
+      }
+    }
+  ],
+  "angle_baseline_check": {
+    "line_points": 401,
+    "source_points": 9331,
+    "best_b_m": 635.5181741547544,
+    "min_angle_deg": 39.46174161308644
+  },
+  "script_sha256": "9aef93fda397418f7d0efd99615df7a497e4fe68e69f395ca367dbfa9b70f6b2",
+  "runtime": {
+    "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.4.4",
+    "seconds": 99.59365910000633
+  }
+}

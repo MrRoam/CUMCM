@@ -1,0 +1,2497 @@
+{
+  "status": "已完成探索性随机验证，非官方成绩",
+  "settings": {
+    "repetitions": 12,
+    "workers": 3,
+    "train_n": 1024,
+    "test_n": 20000,
+    "interior_n": 384,
+    "boundary_n": 64,
+    "local_n": 48,
+    "screen_n": 256,
+    "shortlist_n": 16,
+    "base_seed": 20260911
+  },
+  "validation": {
+    "circle_special_cases": 3,
+    "scalar_clip_crosschecks": 54,
+    "max_circle_difference_m": 1.290319889650456e-09,
+    "mirror_max_difference_m": 3.4354741274000844e-12,
+    "arc_refinement_max_difference_m": 5.610029889524526e-05,
+    "truth_containment": "通过",
+    "randomness": "无；全部确定性网格",
+    "random_source_checks": {
+      "area": {
+        "sample_count": 50000,
+        "transformed_radius_cdf_max_error": 0.004215681634979984,
+        "reproducible": true
+      },
+      "radial": {
+        "sample_count": 50000,
+        "transformed_radius_cdf_max_error": 0.004215681634980095,
+        "reproducible": true
+      }
+    },
+    "random_candidate_feasibility_checks": 2000,
+    "random_truth_containment_checks": 40
+  },
+  "runs": [
+    {
+      "distribution": "area",
+      "repetition": 0,
+      "seed_entropy": [
+        20260911,
+        0,
+        0
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 33.19307016911293,
+      "train_random_best_mean_m": 31.442552147329145,
+      "train_gain_percent": 5.2737454319989014,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 32.27906731631504,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 54.83995497150788,
+        "sample_max_radius_m": 57.88207423528945,
+        "radius_le20_fraction": 0.25165,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            847.5230498421431,
+            524.9504971521881
+          ],
+          "mean_radius_m": 30.85206267574593,
+          "mean_gain_m": 1.4270046405691108,
+          "gain_percent": 4.420836037749608,
+          "paired_mean_gain_95ci_m": [
+            1.3931721092989369,
+            1.4608371718392847
+          ],
+          "p95_radius_m": 52.860551745592026,
+          "sample_max_radius_m": 56.12002258942393,
+          "radius_le20_fraction": 0.24325,
+          "move_seconds": 199.38589162466408
+        },
+        "random_refined": {
+          "point_m": [
+            871.7605530488536,
+            -498.6359312920871
+          ],
+          "mean_radius_m": 30.615491457796587,
+          "mean_gain_m": 1.6635758585184557,
+          "gain_percent": 5.1537296360406994,
+          "paired_mean_gain_95ci_m": [
+            1.5835065440538127,
+            1.7436451729830986
+          ],
+          "p95_radius_m": 52.375799158982325,
+          "sample_max_radius_m": 55.70034970568092,
+          "radius_le20_fraction": 0.2366,
+          "move_seconds": 200.85858247309923
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.631817822294792,
+          "mean_gain_m": 1.6472494940202531,
+          "gain_percent": 5.103150837284793,
+          "paired_mean_gain_95ci_m": [
+            1.6035843618687644,
+            1.6909146261717418
+          ],
+          "p95_radius_m": 52.360577276464895,
+          "sample_max_radius_m": 55.66899315242483,
+          "radius_le20_fraction": 0.2365,
+          "move_seconds": 200.85677674819078
+        }
+      },
+      "seconds": 22.303897799982224
+    },
+    {
+      "distribution": "area",
+      "repetition": 1,
+      "seed_entropy": [
+        20260911,
+        0,
+        1
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 32.021202764181595,
+      "train_random_best_mean_m": 30.523586287375558,
+      "train_gain_percent": 4.6769526049197845,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 32.082338394360676,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 54.91791433341574,
+        "sample_max_radius_m": 57.87528808248952,
+        "radius_le20_fraction": 0.25645,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            868.5125353244462,
+            494.1196758922713
+          ],
+          "mean_radius_m": 30.611360098194105,
+          "mean_gain_m": 1.4709782961665696,
+          "gain_percent": 4.585009602744958,
+          "paired_mean_gain_95ci_m": [
+            1.4275469890202401,
+            1.514409603312899
+          ],
+          "p95_radius_m": 52.87941136869326,
+          "sample_max_radius_m": 56.164826641240865,
+          "radius_le20_fraction": 0.24525,
+          "move_seconds": 199.846769112696
+        },
+        "random_refined": {
+          "point_m": [
+            866.3983124501735,
+            507.841507930749
+          ],
+          "mean_radius_m": 30.491226851817476,
+          "mean_gain_m": 1.591111542543194,
+          "gain_percent": 4.959462502343265,
+          "paired_mean_gain_95ci_m": [
+            1.5484419789292245,
+            1.6337811061571637
+          ],
+          "p95_radius_m": 52.37332135577431,
+          "sample_max_radius_m": 55.622538422104725,
+          "radius_le20_fraction": 0.24495,
+          "move_seconds": 200.8530839189566
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.489841724556378,
+          "mean_gain_m": 1.5924966698042948,
+          "gain_percent": 4.963779916005806,
+          "paired_mean_gain_95ci_m": [
+            1.5482343746169327,
+            1.636758964991657
+          ],
+          "p95_radius_m": 52.40839702822606,
+          "sample_max_radius_m": 55.671012628726984,
+          "radius_le20_fraction": 0.24305,
+          "move_seconds": 200.85677674819078
+        }
+      },
+      "seconds": 24.87111680000089
+    },
+    {
+      "distribution": "area",
+      "repetition": 2,
+      "seed_entropy": [
+        20260911,
+        0,
+        2
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 32.375646984299,
+      "train_random_best_mean_m": 30.795829870109426,
+      "train_gain_percent": 4.879646466851243,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 32.2587750659154,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 54.93224832834397,
+        "sample_max_radius_m": 57.881990004155455,
+        "radius_le20_fraction": 0.2602,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            872.4804019669149,
+            493.40789445113774
+          ],
+          "mean_radius_m": 30.731144899587544,
+          "mean_gain_m": 1.5276301663278617,
+          "gain_percent": 4.735549205468606,
+          "paired_mean_gain_95ci_m": [
+            1.4825814776491584,
+            1.5726788550065651
+          ],
+          "p95_radius_m": 52.70268153207952,
+          "sample_max_radius_m": 55.91435416775859,
+          "radius_le20_fraction": 0.24035,
+          "move_seconds": 200.46679546728475
+        },
+        "random_refined": {
+          "point_m": [
+            867.5772546217112,
+            -505.8368094071482
+          ],
+          "mean_radius_m": 30.673158358559025,
+          "mean_gain_m": 1.5856167073563814,
+          "gain_percent": 4.915303523200863,
+          "paired_mean_gain_95ci_m": [
+            1.5094689956162068,
+            1.661764419096556
+          ],
+          "p95_radius_m": 52.520555682762954,
+          "sample_max_radius_m": 55.638323489072356,
+          "radius_le20_fraction": 0.24145,
+          "move_seconds": 200.85429250958506
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.679786163460008,
+          "mean_gain_m": 1.5789889024553965,
+          "gain_percent": 4.894757780569774,
+          "paired_mean_gain_95ci_m": [
+            1.53497530952942,
+            1.6230024953813729
+          ],
+          "p95_radius_m": 52.50498391609267,
+          "sample_max_radius_m": 55.66490346456637,
+          "radius_le20_fraction": 0.24055,
+          "move_seconds": 200.85677674819078
+        }
+      },
+      "seconds": 20.326807400007965
+    },
+    {
+      "distribution": "area",
+      "repetition": 3,
+      "seed_entropy": [
+        20260911,
+        0,
+        3
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 31.99905716505221,
+      "train_random_best_mean_m": 30.316743468649793,
+      "train_gain_percent": 5.257385202710776,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 32.01213919924345,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 54.66919171573348,
+        "sample_max_radius_m": 57.88435039590243,
+        "radius_le20_fraction": 0.25975,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            884.0986295642269,
+            -462.9082293192788
+          ],
+          "mean_radius_m": 30.671403600883146,
+          "mean_gain_m": 1.340735598360298,
+          "gain_percent": 4.1882099475313534,
+          "paired_mean_gain_95ci_m": [
+            1.256977334193385,
+            1.424493862527211
+          ],
+          "p95_radius_m": 53.26023731835562,
+          "sample_max_radius_m": 56.73736584820741,
+          "radius_le20_fraction": 0.24145,
+          "move_seconds": 199.59102340224163
+        },
+        "random_refined": {
+          "point_m": [
+            869.2679497842674,
+            -502.943149228574
+          ],
+          "mean_radius_m": 30.43537801934952,
+          "mean_gain_m": 1.5767611798939236,
+          "gain_percent": 4.925510194992491,
+          "paired_mean_gain_95ci_m": [
+            1.4984369467879513,
+            1.655085412999896
+          ],
+          "p95_radius_m": 52.36447382746054,
+          "sample_max_radius_m": 55.655509346610856,
+          "radius_le20_fraction": 0.2424,
+          "move_seconds": 200.85602603637258
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.41804564529234,
+          "mean_gain_m": 1.594093553951105,
+          "gain_percent": 4.979653324726199,
+          "paired_mean_gain_95ci_m": [
+            1.5499404244493322,
+            1.6382466834528777
+          ],
+          "p95_radius_m": 52.242549527657545,
+          "sample_max_radius_m": 55.6724909347012,
+          "radius_le20_fraction": 0.24265,
+          "move_seconds": 200.85677674819078
+        }
+      },
+      "seconds": 23.615411200007657
+    },
+    {
+      "distribution": "area",
+      "repetition": 4,
+      "seed_entropy": [
+        20260911,
+        0,
+        4
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 32.091227545646845,
+      "train_random_best_mean_m": 30.365336076482116,
+      "train_gain_percent": 5.378078687422617,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 32.06153545928474,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 54.956714414414265,
+        "sample_max_radius_m": 57.881704129475594,
+        "radius_le20_fraction": 0.2534,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            900.442308598086,
+            -442.79268434218966
+          ],
+          "mean_radius_m": 30.699958245262923,
+          "mean_gain_m": 1.361577214021815,
+          "gain_percent": 4.246762341594323,
+          "paired_mean_gain_95ci_m": [
+            1.271595257662019,
+            1.4515591703816109
+          ],
+          "p95_radius_m": 53.05751785887747,
+          "sample_max_radius_m": 56.69164342785647,
+          "radius_le20_fraction": 0.2289,
+          "move_seconds": 200.68499818575506
+        },
+        "random_refined": {
+          "point_m": [
+            867.6898215292497,
+            -505.6448388976121
+          ],
+          "mean_radius_m": 30.471774832551645,
+          "mean_gain_m": 1.589760626733083,
+          "gain_percent": 4.958466910457036,
+          "paired_mean_gain_95ci_m": [
+            1.5113737414396933,
+            1.6681475120264728
+          ],
+          "p95_radius_m": 52.256593930303,
+          "sample_max_radius_m": 55.63586269994721,
+          "radius_le20_fraction": 0.2382,
+          "move_seconds": 200.85440791670501
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.435745049532667,
+          "mean_gain_m": 1.6257904097520663,
+          "gain_percent": 5.070843883371317,
+          "paired_mean_gain_95ci_m": [
+            1.581692403237299,
+            1.6698884162668337
+          ],
+          "p95_radius_m": 52.42288346452224,
+          "sample_max_radius_m": 55.66928672730039,
+          "radius_le20_fraction": 0.23875,
+          "move_seconds": 200.85677674819078
+        }
+      },
+      "seconds": 17.04273600000306
+    },
+    {
+      "distribution": "area",
+      "repetition": 5,
+      "seed_entropy": [
+        20260911,
+        0,
+        5
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 31.649832715056764,
+      "train_random_best_mean_m": 30.260071657433237,
+      "train_gain_percent": 4.391053406618408,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 32.11081233921039,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 55.06740596303527,
+        "sample_max_radius_m": 57.88186686354624,
+        "radius_le20_fraction": 0.25885,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            856.9126040597662,
+            515.0229211355452
+          ],
+          "mean_radius_m": 30.623661867851393,
+          "mean_gain_m": 1.487150471359002,
+          "gain_percent": 4.631307534823864,
+          "paired_mean_gain_95ci_m": [
+            1.4490471926284538,
+            1.5252537500895502
+          ],
+          "p95_radius_m": 52.899303620659,
+          "sample_max_radius_m": 55.94107832968265,
+          "radius_le20_fraction": 0.2462,
+          "move_seconds": 199.9547769163297
+        },
+        "random_refined": {
+          "point_m": [
+            863.8500307919551,
+            512.1385832137183
+          ],
+          "mean_radius_m": 30.512529214039994,
+          "mean_gain_m": 1.5982831251703988,
+          "gain_percent": 4.977398604203922,
+          "paired_mean_gain_95ci_m": [
+            1.5569760069135694,
+            1.6395902434272283
+          ],
+          "p95_radius_m": 52.53607115993299,
+          "sample_max_radius_m": 55.58987446934415,
+          "radius_le20_fraction": 0.2424,
+          "move_seconds": 200.85047215432843
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.50641199495427,
+          "mean_gain_m": 1.6044003442561197,
+          "gain_percent": 4.9964489446970255,
+          "paired_mean_gain_95ci_m": [
+            1.5604241982840568,
+            1.6483764902281826
+          ],
+          "p95_radius_m": 52.58729315823527,
+          "sample_max_radius_m": 55.67220601429428,
+          "radius_le20_fraction": 0.24085,
+          "move_seconds": 200.85677674819078
+        }
+      },
+      "seconds": 23.20679470000323
+    },
+    {
+      "distribution": "area",
+      "repetition": 6,
+      "seed_entropy": [
+        20260911,
+        0,
+        6
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 32.22904945461469,
+      "train_random_best_mean_m": 30.67686762109943,
+      "train_gain_percent": 4.816095602512447,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 32.09139383158506,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 54.92317681138934,
+        "sample_max_radius_m": 57.879493664364375,
+        "radius_le20_fraction": 0.26055,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            870.1173750895159,
+            -500.6182325694226
+          ],
+          "mean_radius_m": 30.46108374215853,
+          "mean_gain_m": 1.6303100894265314,
+          "gain_percent": 5.080209659893127,
+          "paired_mean_gain_95ci_m": [
+            1.5526432722736574,
+            1.7079769065794055
+          ],
+          "p95_radius_m": 52.33172675386973,
+          "sample_max_radius_m": 55.71757469112695,
+          "radius_le20_fraction": 0.2426,
+          "move_seconds": 200.77080078672813
+        },
+        "random_refined": {
+          "point_m": [
+            867.7959622876431,
+            505.4637377487644
+          ],
+          "mean_radius_m": 30.503091036302806,
+          "mean_gain_m": 1.5883027952822548,
+          "gain_percent": 4.949310720555279,
+          "paired_mean_gain_95ci_m": [
+            1.5451583008968928,
+            1.6314472896676169
+          ],
+          "p95_radius_m": 52.42776946194706,
+          "sample_max_radius_m": 55.64129926063263,
+          "radius_le20_fraction": 0.2436,
+          "move_seconds": 200.85451673703412
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.50279794499425,
+          "mean_gain_m": 1.5885958865908087,
+          "gain_percent": 4.950224022452018,
+          "paired_mean_gain_95ci_m": [
+            1.5444782192676736,
+            1.632713553913944
+          ],
+          "p95_radius_m": 52.45017100878116,
+          "sample_max_radius_m": 55.671940290727726,
+          "radius_le20_fraction": 0.24265,
+          "move_seconds": 200.85677674819078
+        }
+      },
+      "seconds": 20.48138030001428
+    },
+    {
+      "distribution": "area",
+      "repetition": 7,
+      "seed_entropy": [
+        20260911,
+        0,
+        7
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 32.00822875396504,
+      "train_random_best_mean_m": 30.43681501642555,
+      "train_gain_percent": 4.909405483253522,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 32.10736707583923,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 55.07622714083341,
+        "sample_max_radius_m": 57.882219518371656,
+        "radius_le20_fraction": 0.26005,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            897.2643884898416,
+            -448.8723008292783
+          ],
+          "mean_radius_m": 30.673068536177457,
+          "mean_gain_m": 1.4342985396617762,
+          "gain_percent": 4.46719451107246,
+          "paired_mean_gain_95ci_m": [
+            1.3444089894070976,
+            1.5241880899164548
+          ],
+          "p95_radius_m": 52.986952019830255,
+          "sample_max_radius_m": 56.56290641869912,
+          "radius_le20_fraction": 0.23085,
+          "move_seconds": 200.65589702810325
+        },
+        "random_refined": {
+          "point_m": [
+            869.7599506330587,
+            502.09687820846233
+          ],
+          "mean_radius_m": 30.52506767259842,
+          "mean_gain_m": 1.5822994032408153,
+          "gain_percent": 4.928150600151498,
+          "paired_mean_gain_95ci_m": [
+            1.5382388009983767,
+            1.6263600054832539
+          ],
+          "p95_radius_m": 52.63637609135451,
+          "sample_max_radius_m": 55.6636223625375,
+          "radius_le20_fraction": 0.2405,
+          "move_seconds": 200.85653057164004
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.525135553865287,
+          "mean_gain_m": 1.5822315219739471,
+          "gain_percent": 4.92793918055204,
+          "paired_mean_gain_95ci_m": [
+            1.5380638650361738,
+            1.6263991789117205
+          ],
+          "p95_radius_m": 52.637833197440074,
+          "sample_max_radius_m": 55.668869336470394,
+          "radius_le20_fraction": 0.24055,
+          "move_seconds": 200.85677674819078
+        }
+      },
+      "seconds": 19.257620399992447
+    },
+    {
+      "distribution": "area",
+      "repetition": 8,
+      "seed_entropy": [
+        20260911,
+        0,
+        8
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 32.463520418993006,
+      "train_random_best_mean_m": 30.703718664399744,
+      "train_gain_percent": 5.42085926566263,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 32.02283672411932,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 54.87094851615699,
+        "sample_max_radius_m": 57.87994960295197,
+        "radius_le20_fraction": 0.25845,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            871.8937991958236,
+            489.6094442233209
+          ],
+          "mean_radius_m": 30.553267107529205,
+          "mean_gain_m": 1.4695696165901093,
+          "gain_percent": 4.589130030080197,
+          "paired_mean_gain_95ci_m": [
+            1.4244642455518095,
+            1.5146749876284091
+          ],
+          "p95_radius_m": 52.85134608008585,
+          "sample_max_radius_m": 56.16084567875848,
+          "radius_le20_fraction": 0.24185,
+          "move_seconds": 199.99162031933201
+        },
+        "random_refined": {
+          "point_m": [
+            870.835011425595,
+            -500.2410444630585
+          ],
+          "mean_radius_m": 30.479414405825427,
+          "mean_gain_m": 1.5434223182938906,
+          "gain_percent": 4.8197551378432335,
+          "paired_mean_gain_95ci_m": [
+            1.4645370061835596,
+            1.6223076304042217
+          ],
+          "p95_radius_m": 52.371075567734124,
+          "sample_max_radius_m": 55.68174740162473,
+          "radius_le20_fraction": 0.24165,
+          "move_seconds": 200.8576331325357
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.44334312622093,
+          "mean_gain_m": 1.5794935978983864,
+          "gain_percent": 4.9323974996528825,
+          "paired_mean_gain_95ci_m": [
+            1.5351294996534748,
+            1.623857696143298
+          ],
+          "p95_radius_m": 52.41791227636058,
+          "sample_max_radius_m": 55.668406862219896,
+          "radius_le20_fraction": 0.2418,
+          "move_seconds": 200.85677674819078
+        }
+      },
+      "seconds": 21.58611179998843
+    },
+    {
+      "distribution": "area",
+      "repetition": 9,
+      "seed_entropy": [
+        20260911,
+        0,
+        9
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 32.19277071103917,
+      "train_random_best_mean_m": 30.435881014261383,
+      "train_gain_percent": 5.457404435758402,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 31.998179779364065,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 54.91908705821266,
+        "sample_max_radius_m": 57.88430173880121,
+        "radius_le20_fraction": 0.2644,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            874.546194662006,
+            490.0195632144141
+          ],
+          "mean_radius_m": 30.513343926650588,
+          "mean_gain_m": 1.484835852713479,
+          "gain_percent": 4.640375993109034,
+          "paired_mean_gain_95ci_m": [
+            1.438242859730634,
+            1.531428845696324
+          ],
+          "p95_radius_m": 52.705932014468914,
+          "sample_max_radius_m": 55.939008143717054,
+          "radius_le20_fraction": 0.2417,
+          "move_seconds": 200.49441078799583
+        },
+        "random_refined": {
+          "point_m": [
+            874.9946571156163,
+            492.97254321023985
+          ],
+          "mean_radius_m": 30.46754754077827,
+          "mean_gain_m": 1.5306322385857893,
+          "gain_percent": 4.783497840001852,
+          "paired_mean_gain_95ci_m": [
+            1.4837818308037836,
+            1.5774826463677951
+          ],
+          "p95_radius_m": 52.52350448472657,
+          "sample_max_radius_m": 55.7512407476525,
+          "radius_le20_fraction": 0.24105,
+          "move_seconds": 200.86190065216914
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.45932350168333,
+          "mean_gain_m": 1.5388562776807342,
+          "gain_percent": 4.80919942412836,
+          "paired_mean_gain_95ci_m": [
+            1.4942987755291064,
+            1.583413779832362
+          ],
+          "p95_radius_m": 52.46520981695707,
+          "sample_max_radius_m": 55.66960746383783,
+          "radius_le20_fraction": 0.2424,
+          "move_seconds": 200.85677674819078
+        }
+      },
+      "seconds": 22.545149199984735
+    },
+    {
+      "distribution": "area",
+      "repetition": 10,
+      "seed_entropy": [
+        20260911,
+        0,
+        10
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 32.38404192194228,
+      "train_random_best_mean_m": 30.725828968761018,
+      "train_gain_percent": 5.120463212029481,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 32.10579018235313,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 54.87427374877824,
+        "sample_max_radius_m": 57.88321476312087,
+        "radius_le20_fraction": 0.2567,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            864.5253281826765,
+            508.162572029117
+          ],
+          "mean_radius_m": 30.529710687063982,
+          "mean_gain_m": 1.5760794952891513,
+          "gain_percent": 4.909019483206613,
+          "paired_mean_gain_95ci_m": [
+            1.53469178245181,
+            1.6174672081264925
+          ],
+          "p95_radius_m": 52.49043544239274,
+          "sample_max_radius_m": 55.739968305480325,
+          "radius_le20_fraction": 0.243,
+          "move_seconds": 200.56253315917326
+        },
+        "random_refined": {
+          "point_m": [
+            868.0739635073467,
+            -504.9889886584285
+          ],
+          "mean_radius_m": 30.52118242070935,
+          "mean_gain_m": 1.5846077616437841,
+          "gain_percent": 4.935582499740996,
+          "paired_mean_gain_95ci_m": [
+            1.503167056616668,
+            1.6660484666709003
+          ],
+          "p95_radius_m": 52.40147059489341,
+          "sample_max_radius_m": 55.6415752883088,
+          "radius_le20_fraction": 0.2418,
+          "move_seconds": 200.85480176342477
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.492732915726013,
+          "mean_gain_m": 1.6130572666271252,
+          "gain_percent": 5.024194257376472,
+          "paired_mean_gain_95ci_m": [
+            1.5692069709219303,
+            1.6569075623323202
+          ],
+          "p95_radius_m": 52.413165258265316,
+          "sample_max_radius_m": 55.67289353771582,
+          "radius_le20_fraction": 0.24005,
+          "move_seconds": 200.85677674819078
+        }
+      },
+      "seconds": 23.484425200003898
+    },
+    {
+      "distribution": "area",
+      "repetition": 11,
+      "seed_entropy": [
+        20260911,
+        0,
+        11
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 32.268851477510545,
+      "train_random_best_mean_m": 30.45555546431939,
+      "train_gain_percent": 5.619338557664237,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 32.170597075211,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 54.82056877720636,
+        "sample_max_radius_m": 57.88225418685631,
+        "radius_le20_fraction": 0.254,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            874.012026986374,
+            -480.0951903459601
+          ],
+          "mean_radius_m": 30.732871479982975,
+          "mean_gain_m": 1.4377255952280268,
+          "gain_percent": 4.469067179159891,
+          "paired_mean_gain_95ci_m": [
+            1.3583709997483122,
+            1.5170801907077414
+          ],
+          "p95_radius_m": 53.06295177371182,
+          "sample_max_radius_m": 56.49155565780814,
+          "radius_le20_fraction": 0.2391,
+          "move_seconds": 199.43805204726144
+        },
+        "random_refined": {
+          "point_m": [
+            867.1805205051837,
+            -506.51261648945035
+          ],
+          "mean_radius_m": 30.540107232836878,
+          "mean_gain_m": 1.6304898423741214,
+          "gain_percent": 5.068261053912774,
+          "paired_mean_gain_95ci_m": [
+            1.5538177030899747,
+            1.7071619816582682
+          ],
+          "p95_radius_m": 52.2995273968355,
+          "sample_max_radius_m": 55.63244356827158,
+          "radius_le20_fraction": 0.23785,
+          "move_seconds": 200.85388577835684
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            870.0,
+            501.683285691096
+          ],
+          "mean_radius_m": 30.554341112434432,
+          "mean_gain_m": 1.616255962776573,
+          "gain_percent": 5.024016057264838,
+          "paired_mean_gain_95ci_m": [
+            1.572081016357671,
+            1.6604309091954748
+          ],
+          "p95_radius_m": 52.42019187307727,
+          "sample_max_radius_m": 55.671847758773936,
+          "radius_le20_fraction": 0.23765,
+          "move_seconds": 200.85677674819078
+        }
+      },
+      "seconds": 22.09445499998401
+    },
+    {
+      "distribution": "radial",
+      "repetition": 0,
+      "seed_entropy": [
+        20260911,
+        1,
+        0
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 27.570400208880354,
+      "train_random_best_mean_m": 27.350541926654614,
+      "train_gain_percent": 0.7974432019848744,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 161,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 27.134551637991127,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 52.19642400542544,
+        "sample_max_radius_m": 57.88278020861997,
+        "radius_le20_fraction": 0.32985,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            790.6784359023777,
+            610.2104162530402
+          ],
+          "mean_radius_m": 27.032127538502262,
+          "mean_gain_m": 0.10242409948886852,
+          "gain_percent": 0.37746744761193834,
+          "paired_mean_gain_95ci_m": [
+            0.08429042676036912,
+            0.12055777221736792
+          ],
+          "p95_radius_m": 50.579239654021244,
+          "sample_max_radius_m": 56.26859456089537,
+          "radius_le20_fraction": 0.29375,
+          "move_seconds": 199.75276129302833
+        },
+        "random_refined": {
+          "point_m": [
+            800.2562920279531,
+            606.1851344823828
+          ],
+          "mean_radius_m": 27.024156521870104,
+          "mean_gain_m": 0.1103951161210307,
+          "gain_percent": 0.40684333978994636,
+          "paired_mean_gain_95ci_m": [
+            0.08769423874326236,
+            0.13309599349879903
+          ],
+          "p95_radius_m": 50.12799547517248,
+          "sample_max_radius_m": 55.79952979637233,
+          "radius_le20_fraction": 0.28615,
+          "move_seconds": 200.7855124452711
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 27.010134204437236,
+          "mean_gain_m": 0.12441743355389422,
+          "gain_percent": 0.4585203220372994,
+          "paired_mean_gain_95ci_m": [
+            0.10680056978665349,
+            0.14203429732113493
+          ],
+          "p95_radius_m": 50.37628819090739,
+          "sample_max_radius_m": 55.99708986437429,
+          "radius_le20_fraction": 0.29335,
+          "move_seconds": 200.77303180243916
+        }
+      },
+      "seconds": 18.860223299998324
+    },
+    {
+      "distribution": "radial",
+      "repetition": 1,
+      "seed_entropy": [
+        20260911,
+        1,
+        1
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 27.58144970658119,
+      "train_random_best_mean_m": 27.445400802374934,
+      "train_gain_percent": 0.4932623399189668,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 161,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 27.287461641956575,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 52.26190090283116,
+        "sample_max_radius_m": 57.88433752211607,
+        "radius_le20_fraction": 0.33185,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            781.1347754629967,
+            624.3113259626709
+          ],
+          "mean_radius_m": 27.15919474116136,
+          "mean_gain_m": 0.1282669007952124,
+          "gain_percent": 0.47005801594235563,
+          "paired_mean_gain_95ci_m": [
+            0.11389306759376468,
+            0.14264073399666014
+          ],
+          "p95_radius_m": 50.801042587543755,
+          "sample_max_radius_m": 56.33121468028707,
+          "radius_le20_fraction": 0.30275,
+          "move_seconds": 199.99361681442682
+        },
+        "random_refined": {
+          "point_m": [
+            786.0402506357997,
+            624.3924712851207
+          ],
+          "mean_radius_m": 27.141828692083717,
+          "mean_gain_m": 0.14563294987285416,
+          "gain_percent": 0.5336991464568192,
+          "paired_mean_gain_95ci_m": [
+            0.12880444883211553,
+            0.1624614509135928
+          ],
+          "p95_radius_m": 50.52729162478395,
+          "sample_max_radius_m": 56.03324145181406,
+          "radius_le20_fraction": 0.2982,
+          "move_seconds": 200.77103713605018
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 27.14080125473471,
+          "mean_gain_m": 0.14666038722185917,
+          "gain_percent": 0.5374643825292915,
+          "paired_mean_gain_95ci_m": [
+            0.12905383549514818,
+            0.16426693894857017
+          ],
+          "p95_radius_m": 50.4835129797713,
+          "sample_max_radius_m": 55.99974496793483,
+          "radius_le20_fraction": 0.29725,
+          "move_seconds": 200.77303180243916
+        }
+      },
+      "seconds": 16.87654629998724
+    },
+    {
+      "distribution": "radial",
+      "repetition": 2,
+      "seed_entropy": [
+        20260911,
+        1,
+        2
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 27.132466479815417,
+      "train_random_best_mean_m": 26.990480245065804,
+      "train_gain_percent": 0.5233075100460928,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 161,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 27.11463796087234,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 52.15267887655494,
+        "sample_max_radius_m": 57.87717198693935,
+        "radius_le20_fraction": 0.3336,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            791.0264297620931,
+            593.1684449500231
+          ],
+          "mean_radius_m": 27.065041556308163,
+          "mean_gain_m": 0.04959640456417167,
+          "gain_percent": 0.1829137628012646,
+          "paired_mean_gain_95ci_m": [
+            0.03219967937422692,
+            0.06699312975411642
+          ],
+          "p95_radius_m": 51.076575247579676,
+          "sample_max_radius_m": 56.91727536563079,
+          "radius_le20_fraction": 0.30505,
+          "move_seconds": 197.74444282119205
+        },
+        "random_refined": {
+          "point_m": [
+            790.9351288688193,
+            618.2207325725279
+          ],
+          "mean_radius_m": 26.98924958011815,
+          "mean_gain_m": 0.12538838075418676,
+          "gain_percent": 0.4624379677690254,
+          "paired_mean_gain_95ci_m": [
+            0.10661793206845342,
+            0.14415882943992012
+          ],
+          "p95_radius_m": 50.27550848899685,
+          "sample_max_radius_m": 55.948426001838016,
+          "radius_le20_fraction": 0.2973,
+          "move_seconds": 200.77601970965048
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 26.988251833985846,
+          "mean_gain_m": 0.12638612688649128,
+          "gain_percent": 0.4661177002210844,
+          "paired_mean_gain_95ci_m": [
+            0.10880003873251234,
+            0.14397221504047023
+          ],
+          "p95_radius_m": 50.328384955190955,
+          "sample_max_radius_m": 55.999880291556956,
+          "radius_le20_fraction": 0.29875,
+          "move_seconds": 200.77303180243916
+        }
+      },
+      "seconds": 16.122778799996013
+    },
+    {
+      "distribution": "radial",
+      "repetition": 3,
+      "seed_entropy": [
+        20260911,
+        1,
+        3
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 27.067271525236148,
+      "train_random_best_mean_m": 26.974172944210714,
+      "train_gain_percent": 0.34395258841894377,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 161,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 27.28820318013361,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 52.486756206823586,
+        "sample_max_radius_m": 57.87150911916531,
+        "radius_le20_fraction": 0.32665,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            767.2338292482793,
+            639.7708392234617
+          ],
+          "mean_radius_m": 27.190160826681442,
+          "mean_gain_m": 0.09804235345216636,
+          "gain_percent": 0.3592847532135911,
+          "paired_mean_gain_95ci_m": [
+            0.08903860570428991,
+            0.1070461012000428
+          ],
+          "p95_radius_m": 51.35430437289627,
+          "sample_max_radius_m": 56.644992641914016,
+          "radius_le20_fraction": 0.303,
+          "move_seconds": 199.79534283497907
+        },
+        "random_refined": {
+          "point_m": [
+            777.8005247331104,
+            634.5608073409257
+          ],
+          "mean_radius_m": 27.153433773030336,
+          "mean_gain_m": 0.13476940710327823,
+          "gain_percent": 0.49387424380287964,
+          "paired_mean_gain_95ci_m": [
+            0.12111137549652254,
+            0.14842743871003392
+          ],
+          "p95_radius_m": 50.878293043336726,
+          "sample_max_radius_m": 56.17890768362436,
+          "radius_le20_fraction": 0.2954,
+          "move_seconds": 200.76265334850197
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 27.14252024760712,
+          "mean_gain_m": 0.14568293252649567,
+          "gain_percent": 0.5338678093417156,
+          "paired_mean_gain_95ci_m": [
+            0.12807079711499753,
+            0.1632950679379938
+          ],
+          "p95_radius_m": 50.64556647112894,
+          "sample_max_radius_m": 55.99889645139752,
+          "radius_le20_fraction": 0.28975,
+          "move_seconds": 200.77303180243916
+        }
+      },
+      "seconds": 15.614674499985995
+    },
+    {
+      "distribution": "radial",
+      "repetition": 4,
+      "seed_entropy": [
+        20260911,
+        1,
+        4
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 27.11970632261632,
+      "train_random_best_mean_m": 26.958061210609355,
+      "train_gain_percent": 0.5960430031359245,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 161,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 27.18402533896838,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 52.46240737566956,
+        "sample_max_radius_m": 57.87026511505755,
+        "radius_le20_fraction": 0.33145,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            790.0550143185751,
+            594.8972703003967
+          ],
+          "mean_radius_m": 27.111980790118555,
+          "mean_gain_m": 0.07204454884982936,
+          "gain_percent": 0.2650253152411291,
+          "paired_mean_gain_95ci_m": [
+            0.055111753965459795,
+            0.08897734373419892
+          ],
+          "p95_radius_m": 51.3347908311183,
+          "sample_max_radius_m": 56.900634398650276,
+          "radius_le20_fraction": 0.30615,
+          "move_seconds": 197.79683393429605
+        },
+        "random_refined": {
+          "point_m": [
+            792.3659587710272,
+            616.3976508176813
+          ],
+          "mean_radius_m": 27.040866933899018,
+          "mean_gain_m": 0.14315840506936278,
+          "gain_percent": 0.5266269556633498,
+          "paired_mean_gain_95ci_m": [
+            0.12383759342317988,
+            0.1624792167155457
+          ],
+          "p95_radius_m": 50.549415906134875,
+          "sample_max_radius_m": 55.92694259435255,
+          "radius_le20_fraction": 0.29575,
+          "move_seconds": 200.777476481072
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 27.04095674638246,
+          "mean_gain_m": 0.14306859258592425,
+          "gain_percent": 0.5262965686720245,
+          "paired_mean_gain_95ci_m": [
+            0.1255080001635327,
+            0.1606291850083158
+          ],
+          "p95_radius_m": 50.63122147391522,
+          "sample_max_radius_m": 55.9999321274205,
+          "radius_le20_fraction": 0.29745,
+          "move_seconds": 200.77303180243916
+        }
+      },
+      "seconds": 17.33991629999946
+    },
+    {
+      "distribution": "radial",
+      "repetition": 5,
+      "seed_entropy": [
+        20260911,
+        1,
+        5
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 26.97392602412279,
+      "train_random_best_mean_m": 26.81739297397409,
+      "train_gain_percent": 0.5803124469486254,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 161,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 27.348686158461078,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 52.45326909215135,
+        "sample_max_radius_m": 57.86702664604925,
+        "radius_le20_fraction": 0.3299,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            767.8994596871441,
+            -630.9721822124443
+          ],
+          "mean_radius_m": 27.24377363913574,
+          "mean_gain_m": 0.10491251932533656,
+          "gain_percent": 0.383610820342384,
+          "paired_mean_gain_95ci_m": [
+            0.05113243065721056,
+            0.15869260799346255
+          ],
+          "p95_radius_m": 51.478098900389966,
+          "sample_max_radius_m": 56.9222564526358,
+          "radius_le20_fraction": 0.31225,
+          "move_seconds": 198.77580083236913
+        },
+        "random_refined": {
+          "point_m": [
+            783.0597522790655,
+            -628.1020699849772
+          ],
+          "mean_radius_m": 27.191745624596578,
+          "mean_gain_m": 0.1569405338644996,
+          "gain_percent": 0.5738503595937667,
+          "paired_mean_gain_95ci_m": [
+            0.10194625197279288,
+            0.21193481575620632
+          ],
+          "p95_radius_m": 50.68832988582389,
+          "sample_max_radius_m": 56.073464272415706,
+          "radius_le20_fraction": 0.29725,
+          "move_seconds": 200.76800402043793
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 27.213959211282724,
+          "mean_gain_m": 0.13472694717835262,
+          "gain_percent": 0.4926267623889899,
+          "paired_mean_gain_95ci_m": [
+            0.11705836995971965,
+            0.1523955243969856
+          ],
+          "p95_radius_m": 50.614118528035654,
+          "sample_max_radius_m": 55.999907740724424,
+          "radius_le20_fraction": 0.29425,
+          "move_seconds": 200.77303180243916
+        }
+      },
+      "seconds": 13.656717999983812
+    },
+    {
+      "distribution": "radial",
+      "repetition": 6,
+      "seed_entropy": [
+        20260911,
+        1,
+        6
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 26.94198357144247,
+      "train_random_best_mean_m": 26.814931830212863,
+      "train_gain_percent": 0.4715753051095968,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 27.353165206778417,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 52.669921156854556,
+        "sample_max_radius_m": 57.882074508858885,
+        "radius_le20_fraction": 0.3287,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            780.4988860809124,
+            605.6290523380749
+          ],
+          "mean_radius_m": 27.28252316380666,
+          "mean_gain_m": 0.07064204297175809,
+          "gain_percent": 0.2582591171359292,
+          "paired_mean_gain_95ci_m": [
+            0.05782851013040763,
+            0.08345557581310856
+          ],
+          "p95_radius_m": 51.813538849386944,
+          "sample_max_radius_m": 57.087558786885346,
+          "radius_le20_fraction": 0.3096,
+          "move_seconds": 197.58188785508247
+        },
+        "random_refined": {
+          "point_m": [
+            790.2242448627703,
+            619.1232751395852
+          ],
+          "mean_radius_m": 27.20968343061457,
+          "mean_gain_m": 0.14348177616384336,
+          "gain_percent": 0.5245527348633385,
+          "paired_mean_gain_95ci_m": [
+            0.12490549439178797,
+            0.16205805793589875
+          ],
+          "p95_radius_m": 50.80940560786679,
+          "sample_max_radius_m": 55.95963985898449,
+          "radius_le20_fraction": 0.2952,
+          "move_seconds": 200.77529598917312
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 27.20961959760189,
+          "mean_gain_m": 0.14354560917652703,
+          "gain_percent": 0.524786100955347,
+          "paired_mean_gain_95ci_m": [
+            0.1258641313303961,
+            0.16122708702265798
+          ],
+          "p95_radius_m": 50.84480232749563,
+          "sample_max_radius_m": 56.00146959151852,
+          "radius_le20_fraction": 0.29655,
+          "move_seconds": 200.77303180243916
+        }
+      },
+      "seconds": 12.080197199975373
+    },
+    {
+      "distribution": "radial",
+      "repetition": 7,
+      "seed_entropy": [
+        20260911,
+        1,
+        7
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 27.313569542042607,
+      "train_random_best_mean_m": 27.177167271785677,
+      "train_gain_percent": 0.49939379050025634,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 161,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 27.345428994488206,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 51.984540408305044,
+        "sample_max_radius_m": 57.87190264303408,
+        "radius_le20_fraction": 0.32895,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            783.6275676810341,
+            626.5478491851698
+          ],
+          "mean_radius_m": 27.19875963520395,
+          "mean_gain_m": 0.1466693592842531,
+          "gain_percent": 0.5363578655643546,
+          "paired_mean_gain_95ci_m": [
+            0.130801813234245,
+            0.16253690533426118
+          ],
+          "p95_radius_m": 50.33875057834425,
+          "sample_max_radius_m": 56.09934646972431,
+          "radius_le20_fraction": 0.2972,
+          "move_seconds": 200.66234047755506
+        },
+        "random_refined": {
+          "point_m": [
+            789.3725700524394,
+            620.2017647217413
+          ],
+          "mean_radius_m": 27.1934630401982,
+          "mean_gain_m": 0.15196595429000354,
+          "gain_percent": 0.555727080824492,
+          "paired_mean_gain_95ci_m": [
+            0.13374588627192485,
+            0.17018602230808222
+          ],
+          "p95_radius_m": 50.19798411398047,
+          "sample_max_radius_m": 55.97363536992438,
+          "radius_le20_fraction": 0.2937,
+          "move_seconds": 200.7744289808994
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 27.193838568953424,
+          "mean_gain_m": 0.15159042553477425,
+          "gain_percent": 0.5543538028433531,
+          "paired_mean_gain_95ci_m": [
+            0.13392111968073836,
+            0.16925973138881015
+          ],
+          "p95_radius_m": 50.23265028610921,
+          "sample_max_radius_m": 55.99726632809655,
+          "radius_le20_fraction": 0.29425,
+          "move_seconds": 200.77303180243916
+        }
+      },
+      "seconds": 19.69418880000012
+    },
+    {
+      "distribution": "radial",
+      "repetition": 8,
+      "seed_entropy": [
+        20260911,
+        1,
+        8
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 27.765548256358056,
+      "train_random_best_mean_m": 27.394605000647076,
+      "train_gain_percent": 1.335983904535497,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 27.28573103012967,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 52.5572762135657,
+        "sample_max_radius_m": 57.876882956574164,
+        "radius_le20_fraction": 0.33005,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            795.395686987104,
+            -602.9364742257917
+          ],
+          "mean_radius_m": 27.160650513181714,
+          "mean_gain_m": 0.12508051694795858,
+          "gain_percent": 0.4584099902247118,
+          "paired_mean_gain_95ci_m": [
+            0.06942212350832362,
+            0.18073891038759354
+          ],
+          "p95_radius_m": 50.71433914888352,
+          "sample_max_radius_m": 56.22394786479339,
+          "radius_le20_fraction": 0.2956,
+          "move_seconds": 199.6183048549923
+        },
+        "random_refined": {
+          "point_m": [
+            796.2142475556019,
+            -611.4508066167083
+          ],
+          "mean_radius_m": 27.13289541478873,
+          "mean_gain_m": 0.1528356153409388,
+          "gain_percent": 0.5601301836926174,
+          "paired_mean_gain_95ci_m": [
+            0.09712240555056276,
+            0.20854882513131487
+          ],
+          "p95_radius_m": 50.40262867404028,
+          "sample_max_radius_m": 55.87099257884514,
+          "radius_le20_fraction": 0.2912,
+          "move_seconds": 200.78139524594968
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 27.149597810671374,
+          "mean_gain_m": 0.13613321945829265,
+          "gain_percent": 0.49891725205372184,
+          "paired_mean_gain_95ci_m": [
+            0.11847277986928492,
+            0.15379365904730039
+          ],
+          "p95_radius_m": 50.7377463183056,
+          "sample_max_radius_m": 55.996509957886154,
+          "radius_le20_fraction": 0.29505,
+          "move_seconds": 200.77303180243916
+        }
+      },
+      "seconds": 18.953392999974312
+    },
+    {
+      "distribution": "radial",
+      "repetition": 9,
+      "seed_entropy": [
+        20260911,
+        1,
+        9
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 26.667346029485316,
+      "train_random_best_mean_m": 26.35697020578169,
+      "train_gain_percent": 1.1638796877666533,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 161,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 27.243731340853845,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 52.336878659597865,
+        "sample_max_radius_m": 57.88244597520117,
+        "radius_le20_fraction": 0.32945,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            820.5976623870711,
+            -577.4444024761301
+          ],
+          "mean_radius_m": 27.190017669581955,
+          "mean_gain_m": 0.053713671271891396,
+          "gain_percent": 0.19715974511664655,
+          "paired_mean_gain_95ci_m": [
+            -0.0078008223662950835,
+            0.11522816491007787
+          ],
+          "p95_radius_m": 50.13162646977879,
+          "sample_max_radius_m": 55.60828361877563,
+          "radius_le20_fraction": 0.2773,
+          "move_seconds": 200.68109641579503
+        },
+        "random_refined": {
+          "point_m": [
+            789.1633129102122,
+            -620.4662847036236
+          ],
+          "mean_radius_m": 27.094530383452856,
+          "mean_gain_m": 0.14920095740098985,
+          "gain_percent": 0.5476524325331779,
+          "paired_mean_gain_95ci_m": [
+            0.09401453611019217,
+            0.20438737869178752
+          ],
+          "p95_radius_m": 50.65755323739878,
+          "sample_max_radius_m": 55.97649430035421,
+          "radius_le20_fraction": 0.29435,
+          "move_seconds": 200.77421596383732
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 27.105227079677956,
+          "mean_gain_m": 0.13850426117589296,
+          "gain_percent": 0.5083894692802094,
+          "paired_mean_gain_95ci_m": [
+            0.12088840824139555,
+            0.15612011411039037
+          ],
+          "p95_radius_m": 50.50814709614389,
+          "sample_max_radius_m": 55.99712393333414,
+          "radius_le20_fraction": 0.29445,
+          "move_seconds": 200.77303180243916
+        }
+      },
+      "seconds": 12.018935400003102
+    },
+    {
+      "distribution": "radial",
+      "repetition": 10,
+      "seed_entropy": [
+        20260911,
+        1,
+        10
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 27.451520336134905,
+      "train_random_best_mean_m": 27.237215910400323,
+      "train_gain_percent": 0.7806650528294766,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 27.23436941566572,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 52.28694171150173,
+        "sample_max_radius_m": 57.879234618831916,
+        "radius_le20_fraction": 0.3246,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            792.657507492373,
+            -615.0612545374872
+          ],
+          "mean_radius_m": 27.094904066935438,
+          "mean_gain_m": 0.13946534873028898,
+          "gain_percent": 0.5120931812361549,
+          "paired_mean_gain_95ci_m": [
+            0.08391909721415827,
+            0.1950116002464197
+          ],
+          "p95_radius_m": 50.475802928052644,
+          "sample_max_radius_m": 55.95144230447567,
+          "radius_le20_fraction": 0.2884,
+          "move_seconds": 200.65953962044756
+        },
+        "random_refined": {
+          "point_m": [
+            796.6225227074482,
+            -610.9222107767631
+          ],
+          "mean_radius_m": 27.096566524031946,
+          "mean_gain_m": 0.137802891633783,
+          "gain_percent": 0.5059889198481541,
+          "paired_mean_gain_95ci_m": [
+            0.08162362771222251,
+            0.1939821555553435
+          ],
+          "p95_radius_m": 50.35693760695499,
+          "sample_max_radius_m": 55.85451146404972,
+          "radius_le20_fraction": 0.28515,
+          "move_seconds": 200.781811059184
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 27.099541341731662,
+          "mean_gain_m": 0.13482807393405996,
+          "gain_percent": 0.49506589220495895,
+          "paired_mean_gain_95ci_m": [
+            0.1171425596067715,
+            0.15251358826134842
+          ],
+          "p95_radius_m": 50.542017261490365,
+          "sample_max_radius_m": 55.99893412441375,
+          "radius_le20_fraction": 0.2897,
+          "move_seconds": 200.77303180243916
+        }
+      },
+      "seconds": 16.916014499991434
+    },
+    {
+      "distribution": "radial",
+      "repetition": 11,
+      "seed_entropy": [
+        20260911,
+        1,
+        11
+      ],
+      "seed_spawn_keys": {
+        "train": [
+          0
+        ],
+        "candidate": [
+          1
+        ],
+        "test": [
+          2
+        ]
+      },
+      "train_baseline_mean_m": 27.609392121016946,
+      "train_random_best_mean_m": 27.451921097707462,
+      "train_gain_percent": 0.5703530980300453,
+      "initial_pool_size": 450,
+      "refinement_pool_size": 162,
+      "baseline": {
+        "point_m": [
+          750.0,
+          635.5181741547544
+        ],
+        "mean_radius_m": 27.35155187847045,
+        "mean_gain_m": 0.0,
+        "gain_percent": 0.0,
+        "paired_mean_gain_95ci_m": [
+          0.0,
+          0.0
+        ],
+        "p95_radius_m": 52.30737752491582,
+        "sample_max_radius_m": 57.87169389283595,
+        "radius_le20_fraction": 0.32815,
+        "move_seconds": 196.60959790213627
+      },
+      "strategies": {
+        "random_interior": {
+          "point_m": [
+            774.9686975589702,
+            622.6344569146283
+          ],
+          "mean_radius_m": 27.24520771118649,
+          "mean_gain_m": 0.10634416728395762,
+          "gain_percent": 0.3888048757031062,
+          "paired_mean_gain_95ci_m": [
+            0.09515930835322442,
+            0.11752902621469083
+          ],
+          "p95_radius_m": 51.24232415802094,
+          "sample_max_radius_m": 56.79071474337811,
+          "radius_le20_fraction": 0.3075,
+          "move_seconds": 198.8215430111758
+        },
+        "random_refined": {
+          "point_m": [
+            790.6138392301519,
+            618.6289080179843
+          ],
+          "mean_radius_m": 27.19478928543328,
+          "mean_gain_m": 0.1567625930371674,
+          "gain_percent": 0.5731396658357868,
+          "paired_mean_gain_95ci_m": [
+            0.13807023235805438,
+            0.17545495371628045
+          ],
+          "p95_radius_m": 50.415489679398725,
+          "sample_max_radius_m": 55.9431678340412,
+          "radius_le20_fraction": 0.29255,
+          "move_seconds": 200.7756926141971
+        },
+        "previous_grid_reference": {
+          "point_m": [
+            788.0,
+            621.933483162453
+          ],
+          "mean_radius_m": 27.19572656931003,
+          "mean_gain_m": 0.15582530916041964,
+          "gain_percent": 0.5697128625563519,
+          "paired_mean_gain_95ci_m": [
+            0.13818593897477247,
+            0.17346467934606682
+          ],
+          "p95_radius_m": 50.47413598444007,
+          "sample_max_radius_m": 55.98945195607542,
+          "radius_le20_fraction": 0.294,
+          "move_seconds": 200.77303180243916
+        }
+      },
+      "seconds": 18.52799370000139
+    }
+  ],
+  "aggregate": {
+    "area": {
+      "repetitions": 12,
+      "baseline_mean_radius_m": 32.10840270356679,
+      "strategies": {
+        "random_interior": {
+          "mean_radius_m": 30.63774473892398,
+          "mean_gain_percent": 4.580222627202836,
+          "run_gain_percent_std": 0.2529742674901551,
+          "run_gain_percent_range": [
+            4.1882099475313534,
+            5.080209659893127
+          ],
+          "mean_gain_bootstrap_95ci_percent": [
+            4.446875998023707,
+            4.724013189958103
+          ],
+          "positive_test_gain_runs": 12,
+          "positive_paired_ci_runs": 12,
+          "mean_added_move_seconds": 3.5440328343274907,
+          "mean_radius_le20_fraction": 0.24037499999999998,
+          "point_abs_y_mean_m": [
+            873.5273868301518,
+            487.54826712534356
+          ]
+        },
+        "random_refined": {
+          "mean_radius_m": 30.51966408693045,
+          "mean_gain_percent": 4.947869101953658,
+          "run_gain_percent_std": 0.09701213089051854,
+          "run_gain_percent_range": [
+            4.783497840001852,
+            5.1537296360406994
+          ],
+          "mean_gain_bootstrap_95ci_percent": [
+            4.896939172443163,
+            5.001001521194957
+          ],
+          "positive_test_gain_runs": 12,
+          "positive_paired_ci_runs": 12,
+          "mean_added_move_seconds": 4.245913234881023,
+          "mean_radius_le20_fraction": 0.2410375,
+          "point_abs_y_mean_m": [
+            868.7653323083878,
+            503.7763857290243
+          ]
+        },
+        "previous_grid_reference": {
+          "mean_radius_m": 30.511610212917898,
+          "mean_gain_percent": 4.9730504273401275,
+          "run_gain_percent_std": 0.07952444701973489,
+          "run_gain_percent_range": [
+            4.80919942412836,
+            5.103150837284793
+          ],
+          "mean_gain_bootstrap_95ci_percent": [
+            4.928407611371446,
+            5.014038034234106
+          ],
+          "positive_test_gain_runs": 12,
+          "positive_paired_ci_runs": 12,
+          "mean_added_move_seconds": 4.24717884605451,
+          "mean_radius_le20_fraction": 0.2406208333333333,
+          "point_abs_y_mean_m": [
+            870.0,
+            501.683285691096
+          ]
+        }
+      },
+      "mean_train_gain_percent": 5.100035696450203,
+      "baseline_radius_le20_fraction": 0.2578708333333333
+    },
+    "radial": {
+      "repetitions": 12,
+      "baseline_mean_radius_m": 27.26429531539745,
+      "strategies": {
+        "random_interior": {
+          "mean_radius_m": 27.164528487650312,
+          "mean_gain_percent": 0.36578707417779716,
+          "run_gain_percent_std": 0.11854057220896427,
+          "run_gain_percent_range": [
+            0.1829137628012646,
+            0.5363578655643546
+          ],
+          "mean_gain_bootstrap_95ci_percent": [
+            0.3015594821484386,
+            0.43010464500678924
+          ],
+          "positive_test_gain_runs": 12,
+          "positive_paired_ci_runs": 11,
+          "mean_added_move_seconds": 2.7140279949753654,
+          "mean_radius_le20_fraction": 0.2998791666666667,
+          "point_abs_y_mean_m": [
+            786.3144960474109,
+            611.9653307149433
+          ]
+        },
+        "random_refined": {
+          "mean_radius_m": 27.121934100343125,
+          "mean_gain_percent": 0.5220435858894462,
+          "run_gain_percent_std": 0.049151044310188144,
+          "run_gain_percent_range": [
+            0.40684333978994636,
+            0.5738503595937667
+          ],
+          "mean_gain_bootstrap_95ci_percent": [
+            0.4939467268842559,
+            0.5466186096309562
+          ],
+          "positive_test_gain_runs": 12,
+          "positive_paired_ci_runs": 12,
+          "mean_added_move_seconds": 4.1656973473824195,
+          "mean_radius_le20_fraction": 0.2935166666666667,
+          "point_abs_y_mean_m": [
+            790.2223870528666,
+            619.0543430383351
+          ]
+        },
+        "previous_grid_reference": {
+          "mean_radius_m": 27.124181205531368,
+          "mean_gain_percent": 0.513843243757029,
+          "run_gain_percent_std": 0.033561209510458226,
+          "run_gain_percent_range": [
+            0.4585203220372994,
+            0.5697128625563519
+          ],
+          "mean_gain_bootstrap_95ci_percent": [
+            0.49571885626367024,
+            0.5317119553954491
+          ],
+          "positive_test_gain_runs": 12,
+          "positive_paired_ci_runs": 12,
+          "mean_added_move_seconds": 4.163433900302891,
+          "mean_radius_le20_fraction": 0.29456666666666664,
+          "point_abs_y_mean_m": [
+            788.0,
+            621.933483162453
+          ]
+        }
+      },
+      "mean_train_gain_percent": 0.6796809941020795,
+      "baseline_radius_le20_fraction": 0.3294333333333333
+    }
+  },
+  "code_sha256": {
+    "experiments\\q2_randomized_comparison.py": "b57f52d5c5af8778b62369435ef40ba1f13d1a49445ac2279c8544ff33c60a50",
+    "experiments\\q2_strategy_comparison.py": "9aef93fda397418f7d0efd99615df7a497e4fe68e69f395ca367dbfa9b70f6b2"
+  },
+  "runtime": {
+    "seconds": 159.96786579999025,
+    "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.4.4"
+  }
+}

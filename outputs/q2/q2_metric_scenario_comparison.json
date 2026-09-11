@@ -1,0 +1,56 @@
+{
+  "status": "探索性可视化，代表情形从面积均匀加密网格中按两方案半径差自动选择",
+  "mean_strategy_point_m": [
+    870.0,
+    501.683285691096
+  ],
+  "robust_strategy_point_m": [
+    843.0,
+    545.5817985574997
+  ],
+  "sample_count": 92480,
+  "mean_minus_robust_summary_m": {
+    "mean": -0.10265230874871298,
+    "positive_fraction": 0.39945934256055365,
+    "quantiles": {
+      "0": -1.5854831670777827,
+      "0.05": -0.9554834555160838,
+      "0.5": -0.2941201966740721,
+      "0.95": 1.6710231021435615,
+      "1": 2.747274585098083
+    }
+  },
+  "representative_cases": {
+    "robust_advantage": {
+      "index": 275,
+      "source": [
+        59.49479517194434,
+        0.9773867956899591
+      ],
+      "source_range_m": 59.502822937235514,
+      "source_angle_deg": 0.9411764705882354,
+      "error_deg": -0.5882352941176471,
+      "mean_strategy_radius_m": 33.90919468546422,
+      "robust_strategy_radius_m": 31.16192010036614,
+      "mean_minus_robust_m": 2.747274585098083
+    },
+    "mean_advantage": {
+      "index": 90729,
+      "source": [
+        1484.4873329449324,
+        24.387315115483972
+      ],
+      "source_range_m": 1484.6876381288087,
+      "source_angle_deg": 0.9411764705882354,
+      "error_deg": -0.9411764705882354,
+      "mean_strategy_radius_m": 37.39760006139362,
+      "robust_strategy_radius_m": 38.9830832284714,
+      "mean_minus_robust_m": -1.5854831670777827
+    }
+  },
+  "code_sha256": {
+    "experiments\\q2_metric_scenario_visualization.py": "242c86af9db3ffe2adb53bb1dd2edb3e262ae3ffe04f6871c28afe7e63c2503c",
+    "experiments\\q2_strategy_comparison.py": "9aef93fda397418f7d0efd99615df7a497e4fe68e69f395ca367dbfa9b70f6b2",
+    "experiments\\q2_metric_tradeoff.py": "a770bfa257c8d07712c2293ef12f73b720da8581e35dfa511d06f4f483fea2bf"
+  }
+}

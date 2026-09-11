@@ -1,0 +1,32 @@
+{
+  "status": "探索性可视化；最坏值是有限加密网格最大值",
+  "comparison": "面积均匀平均半径最优 vs 离散最坏半径最优",
+  "area_mean_point_m": [
+    870.0,
+    501.683285691
+  ],
+  "sample_worst_point_m": [
+    843.0,
+    545.581798557
+  ],
+  "position_difference_m": 51.53716553950523,
+  "move_distance_m": {
+    "area_mean": 1004.2838837409059,
+    "sample_worst": 1004.1456562255751
+  },
+  "move_distance_difference_m": 0.1382275153308683,
+  "move_time_difference_at_5mps_s": 0.02764550306617366,
+  "tradeoff": {
+    "sample_worst_radius_improvement_m": 0.18858765588723259,
+    "sample_worst_radius_improvement_pct": 0.33874017654450644,
+    "area_mean_radius_penalty_m": 0.1026523087520097,
+    "area_mean_radius_penalty_pct": 0.33650870041368686
+  },
+  "equal_xy_scale": true,
+  "source": "outputs/q2/metric_tradeoff.json",
+  "code_sha256": {
+    "experiments/q2_large_scale_mean_vs_worst.py": "88fdede951810078ca702877e5bf96e8129c8ce61037bbf834090fae3456b81e",
+    "experiments/q2_strategy_comparison.py": "9aef93fda397418f7d0efd99615df7a497e4fe68e69f395ca367dbfa9b70f6b2",
+    "outputs/q2/metric_tradeoff.json": "9f63add018e3e680b123afaa1d1072c6dd50301a87441c90845ef70f6005724c"
+  }
+}

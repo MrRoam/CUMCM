@@ -1,0 +1,33 @@
+{
+  "status": "探索性可视化，非正式模型结果",
+  "comparison": "面积均匀平均半径最优 vs 径向均匀平均半径最优",
+  "area_mean_point_m": [
+    870.0,
+    501.683285691
+  ],
+  "radial_mean_point_m": [
+    788.5,
+    621.303562402
+  ],
+  "position_difference_m": 144.74550286767536,
+  "bearing_difference_deg": 8.26677653508023,
+  "move_distance_m": {
+    "area_mean": 1004.2838837409059,
+    "radial_mean": 1003.8677037605185
+  },
+  "move_distance_difference_m": 0.41617998038748283,
+  "move_time_difference_at_5mps_s": 0.08323599607749657,
+  "plot_bounds_m": [
+    -65.0,
+    1535.0,
+    -100.0,
+    750.3
+  ],
+  "equal_xy_scale": true,
+  "source": "outputs/q2/metric_tradeoff.json",
+  "code_sha256": {
+    "experiments\\q2_large_scale_position_visualization.py": "cd507079f9dddf1eaa00f42943e45f7dc52e0b7e512733ef72a542246b279dc5",
+    "experiments\\q2_strategy_comparison.py": "9aef93fda397418f7d0efd99615df7a497e4fe68e69f395ca367dbfa9b70f6b2",
+    "outputs\\q2\\metric_tradeoff.json": "9f63add018e3e680b123afaa1d1072c6dd50301a87441c90845ef70f6005724c"
+  }
+}
