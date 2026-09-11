@@ -1,0 +1,42 @@
+{
+  "checked_at_utc": "2026-09-11T05:11:41.945240+00:00",
+  "python": "3.13.5",
+  "all_passed": true,
+  "test_count": 31,
+  "transformation_seed": 20260911,
+  "source_sha256": {
+    "experiments/b_q1/solver.py": "05113c71a2056f0fd42e66838aaf5c973800c537886142a9e72d072deebad5cb",
+    "experiments/b_q1/run_examples.py": "0e79a0d6dfbabece0ad218d18978e9e86f2bfc38ebfab9cf6ebf0d17099f91e5",
+    "experiments/b_q1/test_solver.py": "5b35c1a4d0c6b547a58838781f049d0d54f462e68a341141575ef4f0cc94253c",
+    "experiments/b_q1/verify.py": "7643e5cbc33cb7383b4dd7507772ca79e4b02c8ed7e23a3121ccd4d935abbbdf",
+    "experiments/b_q1/plot_results.py": "9ecb5f633dd2d99409e7b848666fc42ac47ac00d7045709a2e9319072026ca6f",
+    "experiments/b_overnight/q2_geometry.py": "0b45c88ba595cab9345f035749b466cfb940b8082cc9780fc1a8b7553d9eea33",
+    "experiments/b_adaptive_q3/geometry.py": "68a081fcaec7fc084a0293c8674c7a2fc363606058e79b44fa359ce36b4bdbaf",
+    "problem/B题.md": "8050f40acfaf2726c1557b918913e23fe28d6d110a388c07cb49b99201887878",
+    "experiments/b_overnight/test_q2_geometry.py": "ac1845bec67bca91387917d8b1f7c13bb7033892669825889c349dc7107b97e3"
+  },
+  "suites": [
+    {
+      "module": "experiments.b_q1.test_solver",
+      "command": "py -3.13 -m unittest experiments.b_q1.test_solver -v",
+      "returncode": 0,
+      "test_count": 15,
+      "transcript": "test_add_observations_cannot_increase_diameter (experiments.b_q1.test_solver.Q1Tests.test_add_observations_cannot_increase_diameter) ... ok\ntest_bearing_wrap (experiments.b_q1.test_solver.Q1Tests.test_bearing_wrap) ... ok\ntest_cli_standard_json (experiments.b_q1.test_solver.Q1Tests.test_cli_standard_json) ... ok\ntest_counterexample_physics_and_cover (experiments.b_q1.test_solver.Q1Tests.test_counterexample_physics_and_cover) ... ok\ntest_empty_and_unbounded (experiments.b_q1.test_solver.Q1Tests.test_empty_and_unbounded) ... ok\ntest_every_vertex_satisfies_original_angles (experiments.b_q1.test_solver.Q1Tests.test_every_vertex_satisfies_original_angles) ... ok\ntest_import_does_not_use_foreign_geometry (experiments.b_q1.test_solver.Q1Tests.test_import_does_not_use_foreign_geometry) ... ok\ntest_invalid_input (experiments.b_q1.test_solver.Q1Tests.test_invalid_input) ... ok\ntest_nearly_parallel_finite_region_has_no_box_cap (experiments.b_q1.test_solver.Q1Tests.test_nearly_parallel_finite_region_has_no_box_cap) ... ok\ntest_permutation_and_duplicate_observations (experiments.b_q1.test_solver.Q1Tests.test_permutation_and_duplicate_observations) ... ok\ntest_point_and_segment (experiments.b_q1.test_solver.Q1Tests.test_point_and_segment) ... ok\ntest_rectangle_from_real_observations (experiments.b_q1.test_solver.Q1Tests.test_rectangle_from_real_observations) ... ok\ntest_translation_and_rotation (experiments.b_q1.test_solver.Q1Tests.test_translation_and_rotation) ... ok\ntest_triangle_from_real_observations (experiments.b_q1.test_solver.Q1Tests.test_triangle_from_real_observations) ... ok\ntest_two_bearings_analytic_quadrilateral (experiments.b_q1.test_solver.Q1Tests.test_two_bearings_analytic_quadrilateral) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.400s\n\nOK\n"
+    },
+    {
+      "module": "experiments.b_overnight.test_q2_geometry",
+      "command": "py -3.13 -m unittest experiments.b_overnight.test_q2_geometry -v",
+      "returncode": 0,
+      "test_count": 16,
+      "transcript": "test_empty_unbounded_point_segment (experiments.b_overnight.test_q2_geometry.Q1GeometryTests.test_empty_unbounded_point_segment) ... ok\ntest_equilateral_diameter_circle_fails (experiments.b_overnight.test_q2_geometry.Q1GeometryTests.test_equilateral_diameter_circle_fails) ... ok\ntest_equilateral_is_realizable_by_three_bearing_wedges (experiments.b_overnight.test_q2_geometry.Q1GeometryTests.test_equilateral_is_realizable_by_three_bearing_wedges) ... ok\ntest_halfplane_strip_without_vertices_is_nonempty (experiments.b_overnight.test_q2_geometry.Q1GeometryTests.test_halfplane_strip_without_vertices_is_nonempty) ... ok\ntest_rectangle_diameter (experiments.b_overnight.test_q2_geometry.Q1GeometryTests.test_rectangle_diameter) ... ok\ntest_wedge_wrap_and_wrong_direction (experiments.b_overnight.test_q2_geometry.Q1GeometryTests.test_wedge_wrap_and_wrong_direction) ... ok\ntest_zero_error_is_ray_not_line (experiments.b_overnight.test_q2_geometry.Q1GeometryTests.test_zero_error_is_ray_not_line) ... ok\ntest_continuous_angle_bin_bound_covers_non_bin_readings (experiments.b_overnight.test_q2_geometry.Q2GeometryTests.test_continuous_angle_bin_bound_covers_non_bin_readings) ... ok\ntest_fifty_metre_indistinguishable_pair (experiments.b_overnight.test_q2_geometry.Q2GeometryTests.test_fifty_metre_indistinguishable_pair) ... ok\ntest_first_region_covers_all_angular_boundaries (experiments.b_overnight.test_q2_geometry.Q2GeometryTests.test_first_region_covers_all_angular_boundaries) ... ok\ntest_history_enlarges_reliable_region (experiments.b_overnight.test_q2_geometry.Q2GeometryTests.test_history_enlarges_reliable_region) ... ok\ntest_inner_candidate_polygon_is_safe (experiments.b_overnight.test_q2_geometry.Q2GeometryTests.test_inner_candidate_polygon_is_safe) ... ok\ntest_multiple_history_certificate_against_direct_rule (experiments.b_overnight.test_q2_geometry.Q2GeometryTests.test_multiple_history_certificate_against_direct_rule) ... ok\ntest_previous_success_and_empty_fail_closed (experiments.b_overnight.test_q2_geometry.Q2GeometryTests.test_previous_success_and_empty_fail_closed) ... ok\ntest_translation_does_not_change_reception (experiments.b_overnight.test_q2_geometry.Q2GeometryTests.test_translation_does_not_change_reception) ... ok\ntest_universal_counterexample_direct_physical_checks (experiments.b_overnight.test_q2_geometry.Q2GeometryTests.test_universal_counterexample_direct_physical_checks) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.008s\n\nOK\n"
+    }
+  ],
+  "artifact_checks": {
+    "example_source_hashes_current": true,
+    "example_inputs_unchanged": true,
+    "all_examples_physically_valid": true,
+    "figure_input_current": true,
+    "figure_script_current": true,
+    "figure_files_unchanged": true
+  }
+}

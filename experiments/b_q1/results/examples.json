@@ -1,0 +1,375 @@
+{
+  "generated_at_utc": "2026-09-11T05:11:40.430423+00:00",
+  "python": "3.13.5",
+  "error_half_width_deg": 1.0,
+  "source_sha256": {
+    "experiments/b_q1/solver.py": "05113c71a2056f0fd42e66838aaf5c973800c537886142a9e72d072deebad5cb",
+    "experiments/b_q1/run_examples.py": "0e79a0d6dfbabece0ad218d18978e9e86f2bfc38ebfab9cf6ebf0d17099f91e5",
+    "experiments/b_q1/test_solver.py": "5b35c1a4d0c6b547a58838781f049d0d54f462e68a341141575ef4f0cc94253c",
+    "experiments/b_q1/verify.py": "7643e5cbc33cb7383b4dd7507772ca79e4b02c8ed7e23a3121ccd4d935abbbdf",
+    "experiments/b_q1/plot_results.py": "9ecb5f633dd2d99409e7b848666fc42ac47ac00d7045709a2e9319072026ca6f",
+    "experiments/b_overnight/q2_geometry.py": "0b45c88ba595cab9345f035749b466cfb940b8082cc9780fc1a8b7553d9eea33",
+    "experiments/b_adaptive_q3/geometry.py": "68a081fcaec7fc084a0293c8674c7a2fc363606058e79b44fa359ce36b4bdbaf",
+    "problem/B题.md": "8050f40acfaf2726c1557b918913e23fe28d6d110a388c07cb49b99201887878"
+  },
+  "examples": {
+    "crossing": {
+      "input": {
+        "label": "两次垂直方向测向交会",
+        "observations": [
+          {
+            "position_m": [
+              -500.0,
+              0.0
+            ],
+            "bearing_deg": 0.0
+          },
+          {
+            "position_m": [
+              0.0,
+              -500.0
+            ],
+            "bearing_deg": 90.0
+          }
+        ],
+        "source_m": [
+          0.0,
+          0.0
+        ],
+        "reception_radius_m": 1100.0,
+        "origin": "自建解析算例；非官方案例。source_m 仅用于事后验证，不传给求解器。"
+      },
+      "result": {
+        "status": "polygon",
+        "vertices_m": [
+          [
+            -8.877167420851265,
+            8.572580930399177
+          ],
+          [
+            -8.577806298231451,
+            -8.57780629823149
+          ],
+          [
+            8.572580930399226,
+            -8.877167420851311
+          ],
+          [
+            8.882578447642402,
+            8.882578447642377
+          ]
+        ],
+        "diameter_m": 24.69271291186712,
+        "diameter_endpoints_m": [
+          [
+            -8.577806298231451,
+            -8.57780629823149
+          ],
+          [
+            8.882578447642402,
+            8.882578447642377
+          ]
+        ],
+        "feasible_point_m": [
+          8.572580930399226,
+          -8.877167420851356
+        ],
+        "recession_direction": null,
+        "observation_count": 2,
+        "model": "intersection_of_forward_bearing_wedges",
+        "error_half_width_deg": 1.0,
+        "numerics": {
+          "distance_tolerance_m": 1e-07,
+          "parallel_tolerance": 1e-12,
+          "local_origin_m": [
+            -500.0,
+            0.0
+          ],
+          "note": "双精度近似；接近平行阈值、容差尺度的退化判别不构成精确算术证书。"
+        }
+      },
+      "physical_check": {
+        "source_within_target_disk": true,
+        "valid_reception_radius": true,
+        "observations": [
+          {
+            "distance_m": 500.0,
+            "true_bearing_deg": 0.0,
+            "error_deg": 0.0,
+            "valid": true
+          },
+          {
+            "distance_m": 500.0,
+            "true_bearing_deg": 90.0,
+            "error_deg": 0.0,
+            "valid": true
+          }
+        ],
+        "all_valid": true
+      },
+      "input_sha256": "3b62540ec42122ac579af45aea39a93a0e3dab703794c7c7b2b275c88bcc86c4"
+    },
+    "rectangle": {
+      "input": {
+        "label": "4米×3米矩形解析核对",
+        "observations": [
+          {
+            "position_m": [
+              -1000.0,
+              0.0
+            ],
+            "bearing_deg": 1.0
+          },
+          {
+            "position_m": [
+              4.0,
+              -1000.0
+            ],
+            "bearing_deg": 91.0
+          },
+          {
+            "position_m": [
+              1004.0,
+              3.0
+            ],
+            "bearing_deg": 181.0
+          },
+          {
+            "position_m": [
+              0.0,
+              1003.0
+            ],
+            "bearing_deg": 271.0
+          }
+        ],
+        "source_m": [
+          2.0,
+          1.5
+        ],
+        "reception_radius_m": 1100.0,
+        "expected_vertices_m": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            4.0,
+            0.0
+          ],
+          [
+            4.0,
+            3.0
+          ],
+          [
+            0.0,
+            3.0
+          ]
+        ],
+        "expected_diameter_m": 5.0,
+        "origin": "自建解析算例；非官方案例。source_m 仅用于事后验证，不传给求解器。"
+      },
+      "result": {
+        "status": "polygon",
+        "vertices_m": [
+          [
+            -2.2737367544323206e-13,
+            0.0
+          ],
+          [
+            4.000000000000114,
+            0.0
+          ],
+          [
+            4.000000000000114,
+            3.0000000000001226
+          ],
+          [
+            -2.2737367544323206e-13,
+            3.000000000000123
+          ]
+        ],
+        "diameter_m": 5.000000000000346,
+        "diameter_endpoints_m": [
+          [
+            -2.2737367544323206e-13,
+            0.0
+          ],
+          [
+            4.000000000000114,
+            3.0000000000001226
+          ]
+        ],
+        "feasible_point_m": [
+          4.000000000000114,
+          -6.147726931719713e-14
+        ],
+        "recession_direction": null,
+        "observation_count": 4,
+        "model": "intersection_of_forward_bearing_wedges",
+        "error_half_width_deg": 1.0,
+        "numerics": {
+          "distance_tolerance_m": 1e-07,
+          "parallel_tolerance": 1e-12,
+          "local_origin_m": [
+            -1000.0,
+            0.0
+          ],
+          "note": "双精度近似；接近平行阈值、容差尺度的退化判别不构成精确算术证书。"
+        }
+      },
+      "physical_check": {
+        "source_within_target_disk": true,
+        "valid_reception_radius": true,
+        "observations": [
+          {
+            "distance_m": 1002.001122753862,
+            "true_bearing_deg": 0.08577206094712318,
+            "error_deg": 0.9142279390528643,
+            "valid": true
+          },
+          {
+            "distance_m": 1001.5019970025022,
+            "true_bearing_deg": 90.11441977702958,
+            "error_deg": 0.8855802229704182,
+            "valid": true
+          },
+          {
+            "distance_m": 1002.001122753862,
+            "true_bearing_deg": 180.0857720609471,
+            "error_deg": 0.9142279390528927,
+            "valid": true
+          },
+          {
+            "distance_m": 1001.5019970025022,
+            "true_bearing_deg": 270.1144197770296,
+            "error_deg": 0.8855802229704182,
+            "valid": true
+          }
+        ],
+        "all_valid": true
+      },
+      "input_sha256": "bd34bfdd4ec94b21af2c1aec6b70e254eb4fe6189ec535e192ac2898dd6c1bda"
+    },
+    "triangle": {
+      "input": {
+        "label": "40米等边三角形覆盖反例",
+        "observations": [
+          {
+            "position_m": [
+              -1000.0,
+              0.0
+            ],
+            "bearing_deg": 1.0
+          },
+          {
+            "position_m": [
+              540.0,
+              -866.0254037844386
+            ],
+            "bearing_deg": 121.00000000000001
+          },
+          {
+            "position_m": [
+              520.0,
+              900.6664199358162
+            ],
+            "bearing_deg": 241.0
+          }
+        ],
+        "source_m": [
+          20.0,
+          11.547005383792515
+        ],
+        "reception_radius_m": 1100.0,
+        "expected_vertices_m": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            40.0,
+            0.0
+          ],
+          [
+            20.0,
+            34.64101615137754
+          ]
+        ],
+        "expected_diameter_m": 40.0,
+        "minimum_cover_radius_m": 23.094010767585033,
+        "origin": "自建解析算例；非官方案例。source_m 仅用于事后验证，不传给求解器。"
+      },
+      "result": {
+        "status": "polygon",
+        "vertices_m": [
+          [
+            -6.821210263296962e-13,
+            0.0
+          ],
+          [
+            40.0,
+            0.0
+          ],
+          [
+            19.99999999999966,
+            34.641016151378054
+          ]
+        ],
+        "diameter_m": 40.00000000000068,
+        "diameter_endpoints_m": [
+          [
+            -6.821210263296962e-13,
+            0.0
+          ],
+          [
+            40.0,
+            0.0
+          ]
+        ],
+        "feasible_point_m": [
+          40.0,
+          0.0
+        ],
+        "recession_direction": null,
+        "observation_count": 3,
+        "model": "intersection_of_forward_bearing_wedges",
+        "error_half_width_deg": 1.0,
+        "numerics": {
+          "distance_tolerance_m": 1e-07,
+          "parallel_tolerance": 1e-12,
+          "local_origin_m": [
+            -1000.0,
+            0.0
+          ],
+          "note": "双精度近似；接近平行阈值、容差尺度的退化判别不构成精确算术证书。"
+        }
+      },
+      "physical_check": {
+        "source_within_target_disk": true,
+        "valid_reception_radius": true,
+        "observations": [
+          {
+            "distance_m": 1020.0653573832087,
+            "true_bearing_deg": 0.6485945237966814,
+            "error_deg": 0.3514054762033254,
+            "valid": true
+          },
+          {
+            "distance_m": 1020.0653573832087,
+            "true_bearing_deg": 120.64859452379669,
+            "error_deg": 0.3514054762033254,
+            "valid": true
+          },
+          {
+            "distance_m": 1020.0653573832087,
+            "true_bearing_deg": 240.64859452379667,
+            "error_deg": 0.3514054762033254,
+            "valid": true
+          }
+        ],
+        "all_valid": true
+      },
+      "input_sha256": "c547f049cab1ee0f2e709b10115bf32732040f105597198d8fde80ab617cc950"
+    }
+  }
+}
