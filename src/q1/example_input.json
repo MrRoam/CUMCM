@@ -1,0 +1,7 @@
+{
+  "description": "人工构造的两站测向输入；非官方数据",
+  "observations": [
+    {"x": -1000, "y": 0, "bearing_deg": 0},
+    {"x": 0, "y": -1000, "bearing_deg": 90}
+  ]
+}

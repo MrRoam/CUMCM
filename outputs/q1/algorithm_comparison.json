@@ -1,0 +1,789 @@
+{
+  "status": "exploratory_benchmark_not_official_test",
+  "human_review": "pending",
+  "timestamp_local": "2026-09-11 16:33:49 +0800",
+  "python_version": "3.13.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "timer": "time.perf_counter_ns",
+  "timed_scope": "region construction + shared rotating-calipers diameter; excludes input generation and JSON I/O",
+  "numeric_representation": "shared HalfPlane integer normalization and Fraction exact predicates",
+  "seed_notes": "redundant=20260911+size; shuffle=731+size",
+  "script_sha256": "b843dfc7d620d63bec35f47dfc8e4be9c6bc7f5707276b2d093a206fd064c7af",
+  "rows": [
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 8,
+      "output_vertices": 8,
+      "method": "A_sorted_deque",
+      "repeats": 5,
+      "median_ms": 0.2704,
+      "min_ms": 0.2594,
+      "max_ms": 0.3909,
+      "operation_counts": {
+        "intersections": 34
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 8,
+      "output_vertices": 8,
+      "method": "B_all_pairs_filter",
+      "repeats": 5,
+      "median_ms": 0.4879,
+      "min_ms": 0.4535,
+      "max_ms": 0.7294,
+      "operation_counts": {
+        "pair_intersections": 28,
+        "feasibility_tests": 129
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 8,
+      "output_vertices": 8,
+      "method": "C_incremental_clip",
+      "repeats": 5,
+      "median_ms": 0.5188,
+      "min_ms": 0.4533,
+      "max_ms": 0.7083,
+      "operation_counts": {
+        "edge_scans": 46,
+        "intersections": 16,
+        "peak_vertices": 8,
+        "sum_vertices_before_update": 46
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 16,
+      "output_vertices": 16,
+      "method": "A_sorted_deque",
+      "repeats": 5,
+      "median_ms": 0.5591,
+      "min_ms": 0.4919,
+      "max_ms": 0.7805,
+      "operation_counts": {
+        "intersections": 58
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 16,
+      "output_vertices": 16,
+      "method": "B_all_pairs_filter",
+      "repeats": 5,
+      "median_ms": 2.565,
+      "min_ms": 2.3357,
+      "max_ms": 2.7293,
+      "operation_counts": {
+        "pair_intersections": 120,
+        "feasibility_tests": 883
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 16,
+      "output_vertices": 16,
+      "method": "C_incremental_clip",
+      "repeats": 5,
+      "median_ms": 1.5666,
+      "min_ms": 1.4881,
+      "max_ms": 1.903,
+      "operation_counts": {
+        "edge_scans": 154,
+        "intersections": 32,
+        "peak_vertices": 16,
+        "sum_vertices_before_update": 154
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 32,
+      "output_vertices": 32,
+      "method": "A_sorted_deque",
+      "repeats": 5,
+      "median_ms": 1.0635,
+      "min_ms": 0.9584,
+      "max_ms": 1.2685,
+      "operation_counts": {
+        "intersections": 106
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 32,
+      "output_vertices": 32,
+      "method": "B_all_pairs_filter",
+      "repeats": 5,
+      "median_ms": 16.3753,
+      "min_ms": 16.1871,
+      "max_ms": 16.8919,
+      "operation_counts": {
+        "pair_intersections": 496,
+        "feasibility_tests": 6311
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 32,
+      "output_vertices": 32,
+      "method": "C_incremental_clip",
+      "repeats": 5,
+      "median_ms": 5.33,
+      "min_ms": 5.0254,
+      "max_ms": 5.5644,
+      "operation_counts": {
+        "edge_scans": 562,
+        "intersections": 64,
+        "peak_vertices": 32,
+        "sum_vertices_before_update": 562
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 64,
+      "output_vertices": 64,
+      "method": "A_sorted_deque",
+      "repeats": 5,
+      "median_ms": 1.9757,
+      "min_ms": 1.6614,
+      "max_ms": 2.1472,
+      "operation_counts": {
+        "intersections": 202
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 64,
+      "output_vertices": 64,
+      "method": "B_all_pairs_filter",
+      "repeats": 5,
+      "median_ms": 118.854,
+      "min_ms": 117.2731,
+      "max_ms": 120.609,
+      "operation_counts": {
+        "pair_intersections": 2016,
+        "feasibility_tests": 47183
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 64,
+      "output_vertices": 64,
+      "method": "C_incremental_clip",
+      "repeats": 5,
+      "median_ms": 18.239,
+      "min_ms": 17.5065,
+      "max_ms": 18.9371,
+      "operation_counts": {
+        "edge_scans": 2146,
+        "intersections": 128,
+        "peak_vertices": 64,
+        "sum_vertices_before_update": 2146
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 96,
+      "output_vertices": 96,
+      "method": "A_sorted_deque",
+      "repeats": 3,
+      "median_ms": 2.7132,
+      "min_ms": 2.5312,
+      "max_ms": 3.3694,
+      "operation_counts": {
+        "intersections": 298
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 96,
+      "output_vertices": 96,
+      "method": "B_all_pairs_filter",
+      "repeats": 3,
+      "median_ms": 386.9538,
+      "min_ms": 382.2479,
+      "max_ms": 388.5738,
+      "operation_counts": {
+        "pair_intersections": 4560,
+        "feasibility_tests": 155383
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 96,
+      "output_vertices": 96,
+      "method": "C_incremental_clip",
+      "repeats": 3,
+      "median_ms": 38.738,
+      "min_ms": 37.7941,
+      "max_ms": 38.7882,
+      "operation_counts": {
+        "edge_scans": 4754,
+        "intersections": 192,
+        "peak_vertices": 96,
+        "sum_vertices_before_update": 4754
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 128,
+      "output_vertices": 128,
+      "method": "A_sorted_deque",
+      "repeats": 3,
+      "median_ms": 4.018,
+      "min_ms": 3.8705,
+      "max_ms": 4.1184,
+      "operation_counts": {
+        "intersections": 394
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 128,
+      "output_vertices": 128,
+      "method": "B_all_pairs_filter",
+      "repeats": 3,
+      "median_ms": 899.9027,
+      "min_ms": 897.5855,
+      "max_ms": 904.6387,
+      "operation_counts": {
+        "pair_intersections": 8128,
+        "feasibility_tests": 363679
+      }
+    },
+    {
+      "scenario": "active_ordered",
+      "halfplanes": 128,
+      "output_vertices": 128,
+      "method": "C_incremental_clip",
+      "repeats": 3,
+      "median_ms": 67.197,
+      "min_ms": 66.6511,
+      "max_ms": 68.0428,
+      "operation_counts": {
+        "edge_scans": 8386,
+        "intersections": 256,
+        "peak_vertices": 128,
+        "sum_vertices_before_update": 8386
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 8,
+      "output_vertices": 8,
+      "method": "A_sorted_deque",
+      "repeats": 5,
+      "median_ms": 0.3301,
+      "min_ms": 0.28,
+      "max_ms": 0.5396,
+      "operation_counts": {
+        "intersections": 34
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 8,
+      "output_vertices": 8,
+      "method": "B_all_pairs_filter",
+      "repeats": 5,
+      "median_ms": 0.648,
+      "min_ms": 0.4891,
+      "max_ms": 0.821,
+      "operation_counts": {
+        "pair_intersections": 28,
+        "feasibility_tests": 127
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 8,
+      "output_vertices": 8,
+      "method": "C_incremental_clip",
+      "repeats": 5,
+      "median_ms": 0.4426,
+      "min_ms": 0.4393,
+      "max_ms": 0.5128,
+      "operation_counts": {
+        "edge_scans": 39,
+        "intersections": 16,
+        "peak_vertices": 8,
+        "sum_vertices_before_update": 39
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 16,
+      "output_vertices": 16,
+      "method": "A_sorted_deque",
+      "repeats": 5,
+      "median_ms": 0.5005,
+      "min_ms": 0.4706,
+      "max_ms": 0.5262,
+      "operation_counts": {
+        "intersections": 58
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 16,
+      "output_vertices": 16,
+      "method": "B_all_pairs_filter",
+      "repeats": 5,
+      "median_ms": 2.5498,
+      "min_ms": 2.1841,
+      "max_ms": 2.7355,
+      "operation_counts": {
+        "pair_intersections": 120,
+        "feasibility_tests": 780
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 16,
+      "output_vertices": 16,
+      "method": "C_incremental_clip",
+      "repeats": 5,
+      "median_ms": 1.4864,
+      "min_ms": 1.3638,
+      "max_ms": 1.7837,
+      "operation_counts": {
+        "edge_scans": 133,
+        "intersections": 32,
+        "peak_vertices": 16,
+        "sum_vertices_before_update": 133
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 32,
+      "output_vertices": 32,
+      "method": "A_sorted_deque",
+      "repeats": 5,
+      "median_ms": 1.0822,
+      "min_ms": 0.872,
+      "max_ms": 1.1941,
+      "operation_counts": {
+        "intersections": 106
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 32,
+      "output_vertices": 32,
+      "method": "B_all_pairs_filter",
+      "repeats": 5,
+      "median_ms": 9.4318,
+      "min_ms": 9.0846,
+      "max_ms": 9.5338,
+      "operation_counts": {
+        "pair_intersections": 496,
+        "feasibility_tests": 3303
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 32,
+      "output_vertices": 32,
+      "method": "C_incremental_clip",
+      "repeats": 5,
+      "median_ms": 4.9887,
+      "min_ms": 4.9308,
+      "max_ms": 5.3026,
+      "operation_counts": {
+        "edge_scans": 538,
+        "intersections": 64,
+        "peak_vertices": 32,
+        "sum_vertices_before_update": 538
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 64,
+      "output_vertices": 64,
+      "method": "A_sorted_deque",
+      "repeats": 5,
+      "median_ms": 1.8927,
+      "min_ms": 1.737,
+      "max_ms": 2.1895,
+      "operation_counts": {
+        "intersections": 202
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 64,
+      "output_vertices": 64,
+      "method": "B_all_pairs_filter",
+      "repeats": 5,
+      "median_ms": 42.0075,
+      "min_ms": 41.0624,
+      "max_ms": 42.623,
+      "operation_counts": {
+        "pair_intersections": 2016,
+        "feasibility_tests": 15348
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 64,
+      "output_vertices": 64,
+      "method": "C_incremental_clip",
+      "repeats": 5,
+      "median_ms": 18.0021,
+      "min_ms": 17.4609,
+      "max_ms": 18.2727,
+      "operation_counts": {
+        "edge_scans": 2061,
+        "intersections": 128,
+        "peak_vertices": 64,
+        "sum_vertices_before_update": 2061
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 96,
+      "output_vertices": 96,
+      "method": "A_sorted_deque",
+      "repeats": 3,
+      "median_ms": 2.9356,
+      "min_ms": 2.7032,
+      "max_ms": 3.0106,
+      "operation_counts": {
+        "intersections": 298
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 96,
+      "output_vertices": 96,
+      "method": "B_all_pairs_filter",
+      "repeats": 3,
+      "median_ms": 106.0525,
+      "min_ms": 105.7311,
+      "max_ms": 106.3612,
+      "operation_counts": {
+        "pair_intersections": 4560,
+        "feasibility_tests": 40207
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 96,
+      "output_vertices": 96,
+      "method": "C_incremental_clip",
+      "repeats": 3,
+      "median_ms": 39.4715,
+      "min_ms": 38.7658,
+      "max_ms": 40.1206,
+      "operation_counts": {
+        "edge_scans": 4617,
+        "intersections": 192,
+        "peak_vertices": 96,
+        "sum_vertices_before_update": 4617
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 128,
+      "output_vertices": 128,
+      "method": "A_sorted_deque",
+      "repeats": 3,
+      "median_ms": 3.9167,
+      "min_ms": 3.6002,
+      "max_ms": 3.9174,
+      "operation_counts": {
+        "intersections": 394
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 128,
+      "output_vertices": 128,
+      "method": "B_all_pairs_filter",
+      "repeats": 3,
+      "median_ms": 203.7361,
+      "min_ms": 202.7021,
+      "max_ms": 207.0132,
+      "operation_counts": {
+        "pair_intersections": 8128,
+        "feasibility_tests": 77724
+      }
+    },
+    {
+      "scenario": "active_shuffled",
+      "halfplanes": 128,
+      "output_vertices": 128,
+      "method": "C_incremental_clip",
+      "repeats": 3,
+      "median_ms": 68.5917,
+      "min_ms": 68.4401,
+      "max_ms": 68.9383,
+      "operation_counts": {
+        "edge_scans": 8223,
+        "intersections": 256,
+        "peak_vertices": 128,
+        "sum_vertices_before_update": 8223
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 8,
+      "output_vertices": 4,
+      "method": "A_sorted_deque",
+      "repeats": 5,
+      "median_ms": 0.2214,
+      "min_ms": 0.2152,
+      "max_ms": 0.4226,
+      "operation_counts": {
+        "intersections": 22
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 8,
+      "output_vertices": 4,
+      "method": "B_all_pairs_filter",
+      "repeats": 5,
+      "median_ms": 0.3441,
+      "min_ms": 0.3229,
+      "max_ms": 0.3555,
+      "operation_counts": {
+        "pair_intersections": 28,
+        "feasibility_tests": 79
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 8,
+      "output_vertices": 4,
+      "method": "C_incremental_clip",
+      "repeats": 5,
+      "median_ms": 0.3883,
+      "min_ms": 0.3492,
+      "max_ms": 0.6641,
+      "operation_counts": {
+        "edge_scans": 32,
+        "intersections": 8,
+        "peak_vertices": 4,
+        "sum_vertices_before_update": 32
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 16,
+      "output_vertices": 4,
+      "method": "A_sorted_deque",
+      "repeats": 5,
+      "median_ms": 0.2834,
+      "min_ms": 0.2499,
+      "max_ms": 0.3952,
+      "operation_counts": {
+        "intersections": 38
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 16,
+      "output_vertices": 4,
+      "method": "B_all_pairs_filter",
+      "repeats": 5,
+      "median_ms": 1.0125,
+      "min_ms": 0.9372,
+      "max_ms": 1.2739,
+      "operation_counts": {
+        "pair_intersections": 120,
+        "feasibility_tests": 275
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 16,
+      "output_vertices": 4,
+      "method": "C_incremental_clip",
+      "repeats": 5,
+      "median_ms": 0.6628,
+      "min_ms": 0.5893,
+      "max_ms": 0.8525,
+      "operation_counts": {
+        "edge_scans": 64,
+        "intersections": 8,
+        "peak_vertices": 4,
+        "sum_vertices_before_update": 64
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 32,
+      "output_vertices": 4,
+      "method": "A_sorted_deque",
+      "repeats": 5,
+      "median_ms": 0.5483,
+      "min_ms": 0.4678,
+      "max_ms": 0.6669,
+      "operation_counts": {
+        "intersections": 84
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 32,
+      "output_vertices": 4,
+      "method": "B_all_pairs_filter",
+      "repeats": 5,
+      "median_ms": 3.1238,
+      "min_ms": 2.772,
+      "max_ms": 3.3345,
+      "operation_counts": {
+        "pair_intersections": 496,
+        "feasibility_tests": 960
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 32,
+      "output_vertices": 4,
+      "method": "C_incremental_clip",
+      "repeats": 5,
+      "median_ms": 1.0998,
+      "min_ms": 1.0778,
+      "max_ms": 1.2547,
+      "operation_counts": {
+        "edge_scans": 128,
+        "intersections": 8,
+        "peak_vertices": 4,
+        "sum_vertices_before_update": 128
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 64,
+      "output_vertices": 4,
+      "method": "A_sorted_deque",
+      "repeats": 5,
+      "median_ms": 0.7824,
+      "min_ms": 0.7726,
+      "max_ms": 0.7937,
+      "operation_counts": {
+        "intersections": 164
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 64,
+      "output_vertices": 4,
+      "method": "B_all_pairs_filter",
+      "repeats": 5,
+      "median_ms": 11.4383,
+      "min_ms": 11.3581,
+      "max_ms": 11.7168,
+      "operation_counts": {
+        "pair_intersections": 2016,
+        "feasibility_tests": 3649
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 64,
+      "output_vertices": 4,
+      "method": "C_incremental_clip",
+      "repeats": 5,
+      "median_ms": 2.0462,
+      "min_ms": 1.9923,
+      "max_ms": 2.51,
+      "operation_counts": {
+        "edge_scans": 256,
+        "intersections": 8,
+        "peak_vertices": 4,
+        "sum_vertices_before_update": 256
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 96,
+      "output_vertices": 4,
+      "method": "A_sorted_deque",
+      "repeats": 3,
+      "median_ms": 1.3002,
+      "min_ms": 1.1506,
+      "max_ms": 1.3099,
+      "operation_counts": {
+        "intersections": 256
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 96,
+      "output_vertices": 4,
+      "method": "B_all_pairs_filter",
+      "repeats": 3,
+      "median_ms": 24.0458,
+      "min_ms": 23.9039,
+      "max_ms": 24.0654,
+      "operation_counts": {
+        "pair_intersections": 4560,
+        "feasibility_tests": 7238
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 96,
+      "output_vertices": 4,
+      "method": "C_incremental_clip",
+      "repeats": 3,
+      "median_ms": 3.1835,
+      "min_ms": 3.1651,
+      "max_ms": 3.2311,
+      "operation_counts": {
+        "edge_scans": 384,
+        "intersections": 8,
+        "peak_vertices": 4,
+        "sum_vertices_before_update": 384
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 128,
+      "output_vertices": 4,
+      "method": "A_sorted_deque",
+      "repeats": 3,
+      "median_ms": 1.6451,
+      "min_ms": 1.3749,
+      "max_ms": 1.6915,
+      "operation_counts": {
+        "intersections": 328
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 128,
+      "output_vertices": 4,
+      "method": "B_all_pairs_filter",
+      "repeats": 3,
+      "median_ms": 43.9814,
+      "min_ms": 43.8944,
+      "max_ms": 44.5163,
+      "operation_counts": {
+        "pair_intersections": 8128,
+        "feasibility_tests": 13809
+      }
+    },
+    {
+      "scenario": "mostly_redundant",
+      "halfplanes": 128,
+      "output_vertices": 4,
+      "method": "C_incremental_clip",
+      "repeats": 3,
+      "median_ms": 4.1965,
+      "min_ms": 3.8507,
+      "max_ms": 4.3061,
+      "operation_counts": {
+        "edge_scans": 512,
+        "intersections": 8,
+        "peak_vertices": 4,
+        "sum_vertices_before_update": 512
+      }
+    }
+  ]
+}

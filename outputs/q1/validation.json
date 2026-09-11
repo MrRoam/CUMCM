@@ -1,0 +1,24 @@
+{
+  "python_version": "3.13.13",
+  "executor": "AI 自动核验",
+  "human_review": "pending",
+  "tests_run": 14,
+  "successful": true,
+  "failures": [],
+  "errors": [],
+  "skipped": [],
+  "seeds": [
+    20260911,
+    421,
+    7301
+  ],
+  "scope": "解析特例、400组固定种子对照、129条有效边；非模拟器验证",
+  "code_sha256": {
+    "__init__.py": "44018486cf51774bad09e87d1af620996ce2cfb5433214235ce9071bddbdb267",
+    "__main__.py": "fc93444449c5e972e0ba87f8575a9155f74e4d4c037cfb1473fca3d7dd52fc94",
+    "examples.py": "23dbd7448ad6a516bacaca98d5e4b37db04c31191b55007455de63dec250aac7",
+    "geometry.py": "70032e23a8871e457fbb6c647f97fe60be09b1f1b806a8ca768f6fea80565e06",
+    "test_geometry.py": "b50fcb1170b7ea6c9f46ca861417c2737eabe7f78951f277d31f1e7bf893329e",
+    "validate.py": "43411992110214d7fefaf83c9842c1c4e76407b9ce2321727f81ffae3a6c952c"
+  }
+}
