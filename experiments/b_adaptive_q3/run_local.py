@@ -5,6 +5,7 @@ import hashlib
 import json
 import math
 import platform
+import sys
 import time
 import traceback
 from pathlib import Path
@@ -129,8 +130,8 @@ def main():
     parser.add_argument("--config", type=Path, help="重放已保存的策略参数")
     args = parser.parse_args()
     output = args.output.resolve()
-    if ROOT not in output.parents:
-        raise ValueError("实验产物必须放在本实验目录内")
+    if (ROOT.parents[1] / "outputs" / "experiments" / ROOT.name).resolve() not in output.parents:
+        raise ValueError("实验产物必须放在 outputs/experiments/b_adaptive_q3/<run-id>/")
     output.mkdir(parents=True, exist_ok=False)
     (output / "actions").mkdir()
     (output / "source").mkdir()
@@ -149,7 +150,7 @@ def main():
     config = Config(**json.loads(args.config.read_text(encoding="utf-8"))) if args.config else Config()
     write_json(output / "cases.json", [s.to_dict() for s in scenarios])
     write_json(output / "config.json", config.to_dict())
-    manifest = dict(stage=args.stage, python=platform.python_version(),
+    manifest = dict(stage=args.stage, command=[str(Path(__file__).relative_to(ROOT.parents[1])), *sys.argv[1:]], python=platform.python_version(),
                     code_sha256={p.name: digest(p) for p in ROOT.glob("*.py")},
                     case_sha256=digest(output / "cases.json"), config_sha256=digest(output / "config.json"),
                     created_local=time.strftime("%Y-%m-%d %H:%M:%S %z"),

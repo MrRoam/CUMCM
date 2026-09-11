@@ -5,6 +5,7 @@ import hashlib
 import json
 import math
 import platform
+import sys
 import statistics
 import time
 import traceback
@@ -154,7 +155,8 @@ def main():
     p.add_argument('--output',type=Path,required=True)
     args=p.parse_args()
     out=args.output.resolve()
-    assert ROOT/'experiments/b_benchmark_scale' in out.parents
+    if (ROOT/'outputs/experiments/b_benchmark_scale').resolve() not in out.parents:
+        raise ValueError('实验产物必须放在 outputs/experiments/b_benchmark_scale/<run-id>/')
     out.mkdir(parents=True,exist_ok=False)
     for name in ['actions','plans','source']: (out/name).mkdir()
     folders=['b_adaptive_q3','b_benchmark_scale']
@@ -169,7 +171,7 @@ def main():
         hashes[str(relative)]=sha(path)
     cases=scenarios(args.stage)
     dump(out/'cases.json',[c.to_dict() for c in cases])
-    dump(out/'manifest.json',dict(stage=args.stage,policies=args.policies,python=platform.python_version(),
+    dump(out/'manifest.json',dict(stage=args.stage,command=[str(Path(__file__).relative_to(ROOT)), *sys.argv[1:]],policies=args.policies,python=platform.python_version(),
         case_sha256=sha(out/'cases.json'),source_sha256=hashes,created=time.strftime('%Y-%m-%d %H:%M:%S %z'),
         environment='自建固定空间误差场，舍入两位小数；不读取官方隐藏案例',
         configs={name:vars(CONFIGS[name]) for name in args.policies}))

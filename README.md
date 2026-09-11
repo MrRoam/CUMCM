@@ -80,3 +80,5 @@ inputs → experiments → src → outputs → paper → submission
 ## 进一步说明
 
 稳定执行规则见 [`AGENTS.md`](AGENTS.md)。已确认的初始化设计与实施计划保存在 [`docs/superpowers/`](docs/superpowers/)。工具链确定后，再按真实需求增加依赖文件、运行入口以及 `tests/`、`configs/` 等目录。
+
+B题基础信息见[项目概况](docs/project_concept.md)、[题意契约](docs/problem_contract.md)与[当前交接](docs/project_handoff.md)。

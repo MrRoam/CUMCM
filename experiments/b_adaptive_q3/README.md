@@ -12,13 +12,13 @@ python experiments/b_benchmark_scale/test_two_stage.py
 python experiments/b_adaptive_q3/example_environment.py
 
 # 基础策略：4个不同布局、误差类型的完整案例
-python experiments/b_adaptive_q3/run_local.py --stage smoke --output experiments/b_adaptive_q3/runs/my_smoke
+python experiments/b_adaptive_q3/run_local.py --stage smoke --output outputs/experiments/b_adaptive_q3/my_smoke
 
 # 两阶段策略：固定七点扫描，然后自由规划路径并按需补测、清除
-python experiments/b_benchmark_scale/run_two_stage.py --stage development --policies scan7_r60 --output experiments/b_benchmark_scale/runs/my_development
+python experiments/b_benchmark_scale/run_two_stage.py --stage development --policies scan7_r60 --output outputs/experiments/b_benchmark_scale/my_development
 
 # 同12个已保存自建案例，比较两套扫描阈值
-python experiments/b_benchmark_scale/run_two_stage.py --stage replay --policies scan7_r60 scan7_r30 --output experiments/b_benchmark_scale/runs/my_comparison
+python experiments/b_benchmark_scale/run_two_stage.py --stage replay --policies scan7_r60 scan7_r30 --output outputs/experiments/b_benchmark_scale/my_comparison
 ```
 
 `run_local.py` 还提供 `--stage holdout`、`--paired-reference`、`--cases 案例.json`、`--config 参数.json`。其中 `reference` 是较笨的逐目标清除格策略，**不是**上面的两阶段七点策略。
@@ -74,6 +74,6 @@ feedback = env.act({"kind": "measure", "position": (0.0, 0.0), "channel": 1})
 - `../b_oracle_q3/oracle.py`：路径动态规划依赖；其中旧离线报告的独立 `main()` 需要历史实验产物，本交付不使用该入口。
 - `../b_overnight/runs/q3_sweep_validation/cases.json`：12个自建案例，供 `--stage replay` 读取，非官方隐藏案例。
 
-运行结果包含 `cases.json`、`results.json`、`RESULTS.md`、逐动作 `actions/*.jsonl` 和代码/参数哈希；两阶段还保存 `plans/`。运行目录中的 `source/` 为审计快照，日常修改应修改上述源文件。新运行结果默认被各实验目录的 `.gitignore` 忽略，避免误交大量产物。
+运行结果包含 `cases.json`、`results.json`、`RESULTS.md`、逐动作 `actions/*.jsonl` 和代码/参数哈希；两阶段还保存 `plans/`。运行目录中的 `source/` 为审计快照，日常修改应修改上述源文件。新运行结果统一写入 `outputs/experiments/<实验目录>/<run-id>/`，默认被根目录 `.gitignore` 忽略，避免误交大量产物。
 
 团队比较建议使用同一批案例，先检查全清，再比较每局 `虚拟总秒数 / 源数`。新方法修改后必须重新运行，不能混用旧代码结果。
