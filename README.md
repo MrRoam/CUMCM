@@ -2,6 +2,8 @@
 
 本仓库用于全国大学生数学建模竞赛的团队协作。项目结构围绕“输入、探索、正式计算、生成结果、论文、提交物”组织，目标是让每个进入论文的结论都能追溯、复核和重新生成。
 
+问题3本地调试入口：[自建仿真环境、七点两阶段策略及队友运行说明](experiments/b_adaptive_q3/README.md)。只需 Python 标准库，不连接官方模拟器；结果仍属探索材料。
+
 ## 当前状态
 
 - 项目阶段：已完成仓库初始化；C 题审题记录已形成，关键口径待团队核验
@@ -35,7 +37,7 @@ CUMCM/
 
 - `inputs/official/` 永远保持官方原件，不在原文件上清洗、改名或覆盖。
 - `inputs/external/` 只放建模实际使用的外部数据，并记录来源。
-- `experiments/` 允许快速试错，但其中的结果不能直接作为论文正式依据。
+- `experiments/` 允许快速试错，但其中的结果不能直接作为论文正式依据。 目录与产物规则见[实验规范](docs/experiment_rules.md)，已有实验见[实验索引](experiments/README.md)。
 - `src/` 是正式计算的唯一代码来源，使用仓库相对路径，并将结果写入 `outputs/`。
 - `outputs/` 中用于论文的图、表和数字必须能由代码重新生成，不手工修改。
 - `paper/` 只维护一份权威正文，不同时维护 Word 和 LaTeX 两套正式版本。
@@ -78,3 +80,5 @@ inputs → experiments → src → outputs → paper → submission
 ## 进一步说明
 
 稳定执行规则见 [`AGENTS.md`](AGENTS.md)。已确认的初始化设计与实施计划保存在 [`docs/superpowers/`](docs/superpowers/)。工具链确定后，再按真实需求增加依赖文件、运行入口以及 `tests/`、`configs/` 等目录。
+
+B题基础信息见[项目概况](docs/project_concept.md)、[题意契约](docs/problem_contract.md)与[当前交接](docs/project_handoff.md)。
