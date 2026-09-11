@@ -1,0 +1,56 @@
+{
+  "inputs": {
+    "official_problem": "inputs/official/B题/B题.pdf"
+  },
+  "evaluators": {
+    "command_entry": "src/q2/__main__.py",
+    "geometry": "src/q2/geometry.py",
+    "strategy": "src/q2/strategy.py",
+    "configuration": "src/q2/strategy_config.json"
+  },
+  "candidate": {
+    "adopted_configuration": "src/q2/strategy_config.json"
+  },
+  "run": {
+    "verification_result": "outputs/q2/adopted_average_strategy.json",
+    "search_result": "outputs/q2/adopted_average_strategy_search.json"
+  },
+  "evaluation": {
+    "objective": {
+      "path": "src/q2/strategy_config.json",
+      "pointer": "/objective"
+    },
+    "standard_scene": {
+      "path": "src/q2/strategy_config.json",
+      "pointer": "/standard_scene"
+    },
+    "search_settings": {
+      "path": "src/q2/strategy_config.json",
+      "pointer": "/search"
+    },
+    "verification_grid": {
+      "path": "src/q2/strategy_config.json",
+      "pointer": "/verification_grid"
+    }
+  },
+  "metrics": {
+    "area_mean_radius": {
+      "path": "outputs/q2/adopted_average_strategy.json",
+      "pointer": "/result/area_mean_radius_m",
+      "unit": "m",
+      "direction": "min"
+    },
+    "p95_radius": {
+      "path": "outputs/q2/adopted_average_strategy.json",
+      "pointer": "/result/p95_radius_m",
+      "unit": "m",
+      "direction": "min"
+    },
+    "move_time": {
+      "path": "outputs/q2/adopted_average_strategy.json",
+      "pointer": "/result/move_seconds_at_5mps",
+      "unit": "s",
+      "direction": "min"
+    }
+  }
+}

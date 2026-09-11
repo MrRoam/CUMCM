@@ -1,0 +1,132 @@
+{
+  "format": "modeling-result-receipt/1",
+  "boundary": "Only declared provenance and comparison scope checked; no mathematical, optimality or human-review claim.",
+  "inputs": {
+    "official_problem": {
+      "path": "inputs/official/B题/B题.pdf",
+      "sha256": "81c992a9bee5376308c4768b58719b177f17d6ee1f9861577a851924c5a838ca"
+    }
+  },
+  "evaluators": {
+    "command_entry": {
+      "path": "src/q2/__main__.py",
+      "sha256": "9dcafeca752973a71edfd0591481eb9a20d5db3e1055309304a6d1dccb8c6822"
+    },
+    "geometry": {
+      "path": "src/q2/geometry.py",
+      "sha256": "508177bbb2e853436081cc8b5b4e78d82131284a2d45ee70df7755778ae196cf"
+    },
+    "strategy": {
+      "path": "src/q2/strategy.py",
+      "sha256": "6d4165c7a9763147e3fb3cbe6258f10dc75c273db6b74ca4e413c03840123f8b"
+    },
+    "configuration": {
+      "path": "src/q2/strategy_config.json",
+      "sha256": "99cfaf2725aa3f373f4a602b089d1f90d133524e7b7faa5aa7c105402b03d003"
+    }
+  },
+  "candidate": {
+    "adopted_configuration": {
+      "path": "src/q2/strategy_config.json",
+      "sha256": "99cfaf2725aa3f373f4a602b089d1f90d133524e7b7faa5aa7c105402b03d003"
+    }
+  },
+  "run": {
+    "verification_result": {
+      "path": "outputs/q2/adopted_average_strategy.json",
+      "sha256": "ebf4b50b73f45acc7f45c181d7fc30a58c1526536048cdc063135fc83ad36d51"
+    },
+    "search_result": {
+      "path": "outputs/q2/adopted_average_strategy_search.json",
+      "sha256": "893f3e382d901f6a39a500913a6f2bc78d48c5b494974e74a00f1e735c0215fc"
+    }
+  },
+  "evaluation": {
+    "objective": {
+      "path": "src/q2/strategy_config.json",
+      "sha256": "99cfaf2725aa3f373f4a602b089d1f90d133524e7b7faa5aa7c105402b03d003",
+      "pointer": "/objective",
+      "value": "在保守二次接收可行域内，最小化两次测向交集的面积均匀平均最小包围圆半径"
+    },
+    "standard_scene": {
+      "path": "src/q2/strategy_config.json",
+      "sha256": "99cfaf2725aa3f373f4a602b089d1f90d133524e7b7faa5aa7c105402b03d003",
+      "pointer": "/standard_scene",
+      "value": {
+        "first_point_local_m": [
+          0.0,
+          0.0
+        ],
+        "first_bearing_center_deg": 0.0,
+        "bearing_error_deg": 1.0,
+        "source_range_m": [
+          5.0,
+          1500.0
+        ],
+        "source_position_weight": "area-uniform: angle uniform and squared radius uniform",
+        "second_error_weight": "uniform on [-1 deg, 1 deg]",
+        "receive_constraint": "max distance from second point to initial outer polygon <= 1000 m",
+        "target_circle_clipping": false,
+        "search_half_plane": "y >= 0; y <= 0 is its mirror"
+      }
+    },
+    "search_settings": {
+      "path": "src/q2/strategy_config.json",
+      "sha256": "99cfaf2725aa3f373f4a602b089d1f90d133524e7b7faa5aa7c105402b03d003",
+      "pointer": "/search",
+      "value": {
+        "method": "deterministic coarse grid plus local boundary refinement",
+        "coarse_step_m": 25.0,
+        "training_grid": [
+          24,
+          3,
+          3
+        ],
+        "refinement_steps_m": [
+          10.0,
+          5.0,
+          2.0,
+          1.0,
+          0.5
+        ],
+        "continuous_global_optimum_proved": false
+      }
+    },
+    "verification_grid": {
+      "path": "src/q2/strategy_config.json",
+      "sha256": "99cfaf2725aa3f373f4a602b089d1f90d133524e7b7faa5aa7c105402b03d003",
+      "pointer": "/verification_grid",
+      "value": [
+        320,
+        17,
+        17
+      ]
+    }
+  },
+  "metrics": {
+    "area_mean_radius": {
+      "path": "outputs/q2/adopted_average_strategy.json",
+      "sha256": "ebf4b50b73f45acc7f45c181d7fc30a58c1526536048cdc063135fc83ad36d51",
+      "pointer": "/result/area_mean_radius_m",
+      "value": 30.505097973934735,
+      "unit": "m",
+      "direction": "min"
+    },
+    "p95_radius": {
+      "path": "outputs/q2/adopted_average_strategy.json",
+      "sha256": "ebf4b50b73f45acc7f45c181d7fc30a58c1526536048cdc063135fc83ad36d51",
+      "pointer": "/result/p95_radius_m",
+      "value": 52.43882929509119,
+      "unit": "m",
+      "direction": "min"
+    },
+    "move_time": {
+      "path": "outputs/q2/adopted_average_strategy.json",
+      "sha256": "ebf4b50b73f45acc7f45c181d7fc30a58c1526536048cdc063135fc83ad36d51",
+      "pointer": "/result/move_seconds_at_5mps",
+      "value": 200.85677674818118,
+      "unit": "s",
+      "direction": "min"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "当前采用方案的AI自动复核；非官方成绩、非连续全局最优证明",
+  "action": "确定性粗网格加局部边界细化复算",
+  "model_config": {
+    "schema_version": 1,
+    "decision_id": "D-006",
+    "status": "当前采用；待团队人工核验与一般场景扩展",
+    "strategy_name": "面积均匀下最小平均包围圆半径",
+    "objective": "在保守二次接收可行域内，最小化两次测向交集的面积均匀平均最小包围圆半径",
+    "selected_local_point_m": [
+      870.0,
+      501.683285691
+    ],
+    "symmetric_alternative_local_point_m": [
+      870.0,
+      -501.683285691
+    ],
+    "standard_scene": {
+      "first_point_local_m": [
+        0.0,
+        0.0
+      ],
+      "first_bearing_center_deg": 0.0,
+      "bearing_error_deg": 1.0,
+      "source_range_m": [
+        5.0,
+        1500.0
+      ],
+      "source_position_weight": "area-uniform: angle uniform and squared radius uniform",
+      "second_error_weight": "uniform on [-1 deg, 1 deg]",
+      "receive_constraint": "max distance from second point to initial outer polygon <= 1000 m",
+      "target_circle_clipping": false,
+      "search_half_plane": "y >= 0; y <= 0 is its mirror"
+    },
+    "search": {
+      "method": "deterministic coarse grid plus local boundary refinement",
+      "coarse_step_m": 25.0,
+      "training_grid": [
+        24,
+        3,
+        3
+      ],
+      "refinement_steps_m": [
+        10.0,
+        5.0,
+        2.0,
+        1.0,
+        0.5
+      ],
+      "continuous_global_optimum_proved": false
+    },
+    "verification_grid": [
+      320,
+      17,
+      17
+    ],
+    "movement_speed_mps": 5.0,
+    "human_review": "pending"
+  },
+  "result": {
+    "point_m": [
+      870.0,
+      501.683285691
+    ],
+    "training_area_mean_radius_m": 30.53643168016312,
+    "training_sample_count": 216,
+    "evaluated_point_count": 416,
+    "continuous_global_optimum_proved": false
+  },
+  "python_version": "3.13.13",
+  "numpy_required": true,
+  "human_review": "pending",
+  "code_sha256": {
+    "__init__.py": "dad23bb193d3553a787d26fb8b8229f02ec6ba8dc383b30deb36c784b3d26811",
+    "__main__.py": "9dcafeca752973a71edfd0591481eb9a20d5db3e1055309304a6d1dccb8c6822",
+    "geometry.py": "508177bbb2e853436081cc8b5b4e78d82131284a2d45ee70df7755778ae196cf",
+    "README.md": "438249e1220207281383109284108157d51808c3c13cc59035d9c13bc5ef86d1",
+    "receipt_spec.json": "348e17ad2d204dfc465d1e73652ebfbcfb25fda74179c25923c542892dc35a9e",
+    "strategy.py": "6d4165c7a9763147e3fb3cbe6258f10dc75c273db6b74ca4e413c03840123f8b",
+    "strategy_config.json": "99cfaf2725aa3f373f4a602b089d1f90d133524e7b7faa5aa7c105402b03d003",
+    "test_strategy.py": "6b9695e0dad4813bebe3df96a1b319940e35d896d010e27af6fe440ff0ffbb07"
+  },
+  "config_sha256": "99cfaf2725aa3f373f4a602b089d1f90d133524e7b7faa5aa7c105402b03d003"
+}

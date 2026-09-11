@@ -5,10 +5,11 @@
 ## 当前状态
 
 - 正式选题：B 题，团队已确认不再以 C 题作为当前建模方向。
-- 当前阶段：完成题面与附件整理，已形成审题和候选建模思路；正式算法、模拟器客户端与测试尚未实现。
-- 编程工具链：待决定。
+- 当前阶段：第一问方法 A 已实现并通过自动核验；第二问暂选面积均匀平均最小包围圆半径策略，并已晋升到 `src/q2/`；第三、四问、模拟器客户端和演练尚未实现。团队人工复核待完成。
+- 编程工具链：第一问采用 Python 3.13 标准库，第二问正式包使用 Python 3.13 与 NumPy 2.4.4；其余模块待决定。
 - 论文主格式：待决定，后续只维护一种权威正文格式。
 - 当前工作入口：[`docs/B题/README.md`](docs/B题/README.md)。
+- 下一位 Codex 接续入口：[`项目完整交接`](docs/B题/project_handoff.md)，含未提交文件清单、用户已确认定义、运行入口和结果边界。
 
 ## 目录说明
 
@@ -47,9 +48,38 @@ CUMCM/
 - [模拟器使用说明 Markdown](docs/B题/附件1.md)
 - [模拟器通信接口说明及编程指南 Markdown](docs/B题/附件2.md)
 - [B 题审题与建模思路](docs/B题/B题审题与建模思路.md)
+- [第一问：方法 A、直径与覆盖证明、运行及验证](docs/B题/问题1_方法A与验证.md)
+- [第一问：三种定位区域算法效率对比](docs/B题/问题1_三种区域算法效率对比.md)
+- [第二问：两种选点策略比较](docs/B题/问题2_两种选点策略比较.md)
+- [第二问：随机位置独立验证](outputs/q2/randomized_comparison.md)
+- [第二问：面积均匀平均半径正式选点包](src/q2/README.md)
 - [2026 年论文格式规范 Markdown](docs/B题/format2026.md)
 
 模拟器程序、账号、正式测试日志和演练结果当前不在仓库中。不得在没有真实运行记录的情况下填写清除比例、任务耗时或正式测试成绩。
+
+## 第一问运行入口
+
+在仓库根目录运行（无第三方依赖）：
+
+```console
+python -m src.q1 --demo
+python -m src.q1.validate
+```
+
+源码与测试位于 `src/q1/`，输出位于 `outputs/q1/`。演示输入均为人工构造，不是官方数据；数值结果与源码哈希对应。普通 JSON 输入格式及算法适用边界见第一问说明。验证通过不代表已经完成人工复核或通过模拟器测试。
+
+## 第二问运行入口
+
+在仓库根目录运行：
+
+```console
+python -m unittest src.q2.test_strategy
+python -m src.q2 recommend --first-x 0 --first-y 0 --bearing-deg 0 --side left
+python -m src.q2 verify-selected
+python -m src.q2 search
+```
+
+模型契约、适用边界和AI接续顺序见 `src/q2/README.md` 与 `src/q2/strategy_config.json`。当前结果只支持未被目标圆域额外裁剪的标准完整扇形，不构成连续全局最优或模拟器成绩。
 
 ## 工作流
 
