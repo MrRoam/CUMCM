@@ -1,66 +1,79 @@
-# 第三问：可配置动态基础策略
+# 问题3本地仿真环境：队友使用入口
 
-本目录落实[自主设计](../research/2026-09-11_动态选点与策略迭代设计.md)的第一步：**用同一份信息状态贯通动态选点与有限收尾，先取得真实的本地完整运行记录。** 本地结果见 [RESULTS.md](RESULTS.md)。代码、生成案例和结果均为探索材料，未晋升正式方法。
+这是按题面公开规则编写的 Python 环境，不调用官方模拟器后台。用于在可控案例上调试、比较策略；没有复刻官方隐藏源位置、接收半径分布和误差场，不能把本地成绩当作官方成绩。当前交付以问题3为主。
 
-## 程序每一步做什么
+## 直接运行
 
-1. 维护 20 个频道的状态、测量历史、保守可能位置和已排除圆盘。收到方向后，用带误差的两条射线、最大接收距离及目标圆域求交；无信号只在第三问排除至少 1000 米内的位置。
-2. 生成当前点、发现参照点、已发现区域中心、长轴两侧偏移点，以及相近目标区域的折中点。点位随已有信息改变，不预设最终点数。
-3. 在每个点对频道估算收益。未知频道按粗网格的新增覆盖排序；已发现频道按兼容代表点预测测向后的区域缩小比例。对有用频道排序，比较前缀批次的“收益÷移动、检测、切换费用”。这只是启发式，不是完整未来成本或已知概率后验。
-4. 比较上述批次与可靠清除动作。一个区域已能装进半径 20 米以内的圆时，不再奖励该频道的补测。只执行当前动作，收到反馈后重新生成后续动作。
-5. 需要时沿有限参照流程补齐发现、清除证据；此前记录全部复用。原型使用 6000 虚拟秒或 600 个自适应动作的人工阈值，单次动作可能跨过阈值，之后不再重置。它们是未调优的工程参数，与用户举例的轮数无关。
-6. 所有发现目标均有成功清除反馈，而且未发现频道均获得七点阴性证据，或已确认源数达 16，才结束。
+Python 3.10+，只使用标准库，无须安装第三方包。以下命令从仓库根目录运行；Windows 可以把 `python` 换成 `py -3.13`。输出目录必须尚不存在。
 
-未来 rollout 与 irace 将复用上述状态和完整执行策略。本版没有它们，也没有模拟器网络接入。
+```sh
+python experiments/b_adaptive_q3/test_core.py
+python experiments/b_benchmark_scale/test_two_stage.py
+python experiments/b_adaptive_q3/example_environment.py
 
-## 为什么粗网格没有把目标漏掉
+# 基础策略：4个不同布局、误差类型的完整案例
+python experiments/b_adaptive_q3/run_local.py --stage smoke --output outputs/experiments/b_adaptive_q3/my_smoke
 
-粗网格只影响候选排序。不存在的证明依靠连续几何支持的七点参照逐频道检查；发现之后的区域是外包近似。圆用外切多边形，半平面裁剪保留向外余量。每个阴性圆盘单独保存，只有整格严格落在其中时才删格；部分交叠、由多个圆联合覆盖但尚未证明的情况继续保留。因此可能多保留位置，但不能因网格抽样没抽到就宣布没有目标。
+# 两阶段策略：固定七点扫描，然后自由规划路径并按需补测、清除
+python experiments/b_benchmark_scale/run_two_stage.py --stage development --policies scan7_r60 --output outputs/experiments/b_benchmark_scale/my_development
 
-一次方向使目标落入长 1500 米、半宽 26.4 米的矩形；两行、每行 50 个清除格覆盖它，每格中心到最远角点为 19.98099097 米，小于 20 米。宽度包含接口最后两位小数舍入。参考流程对一个目标按蛇形顺序清除后才转向下一个，避免在目标间来回切换。已缩小到可可靠清除的区域允许提前清除。
-
-## 自建环境假设
-
-- 只按公开题面自行生成 Q3 全向源，未读取官方隐藏案例。布局、半径分布和空间误差函数是测试假设。
-- 测量误差由种子、频道和位置确定，重复位置不重新抽样。提供零误差、平滑误差、固定极限偏差、位置散列误差。
-- 模拟器返回角度舍入到两位小数；程序额外包含 0.005° 的舍入余量。若官方实际返回总误差已严格限制在 ±1°，这只会略微保守。
-- 几何、计费与公开返回字段对应；不模拟 HTTP、请求重试、登录、窗口倒计时或服务器延迟。程序现实耗时由本地墙钟测量，不能当官方成绩。
-- 模拟器可单元检查半圆发射，但整局 Q3 驱动拒绝定向源，避免错误套用阴性圆盘规则。
-
-## 运行
-
-使用 Python 3.10 及以上，仅标准库。本机已验证 `py -3.13`。命令在仓库根目录执行；结果目录必须尚不存在，避免覆盖已有实验。
-
-```powershell
-py -3.13 experiments/b_adaptive_q3/test_core.py
-py -3.13 experiments/b_adaptive_q3/run_local.py --stage smoke --paired-reference --output experiments/b_adaptive_q3/runs/replay_smoke
-py -3.13 experiments/b_adaptive_q3/run_local.py --stage holdout --paired-reference --cases experiments/b_adaptive_q3/runs/holdout/cases.json --config experiments/b_adaptive_q3/runs/holdout/config.json --output experiments/b_adaptive_q3/runs/replay_holdout
-py -3.13 experiments/b_adaptive_q3/summarize.py
+# 同12个已保存自建案例，比较两套扫描阈值
+python experiments/b_benchmark_scale/run_two_stage.py --stage replay --policies scan7_r60 scan7_r30 --output outputs/experiments/b_benchmark_scale/my_comparison
 ```
 
-`reference` 是同一代码关闭自适应候选、直接按发现参照与清除格完成的模式，专用于验证共用收尾和粗略比较，不代表先进基准。
+`run_local.py` 还提供 `--stage holdout`、`--paired-reference`、`--cases 案例.json`、`--config 参数.json`。其中 `reference` 是较笨的逐目标清除格策略，**不是**上面的两阶段七点策略。
 
-`--cases` 重放冻结真值与噪声种子；源代码快照在运行目录的 `source/`。精确重放旧版本可进入其 `source/` 目录运行该快照，并将输出放在该 `source/` 内的新子目录。虚拟轨迹应完全一致，现实秒数随机器负载变化。
+`run_two_stage.py` 提供 `development`（12例）、`holdout`（24例）、`stress`（8例）、`replay`（随仓库提供的12例）；可选 `scan7_r60`、`scan7_r30`、`scan13_r60`、`scan19_r60`。这些固定案例此前已被开发者查看过，队友不能把它们称为新的盲测集。新测试可另选种子并用 `generate()` 生成。
 
-## 文件分工
+## 接入自己的策略
 
-| 文件 | 职责 |
+同目录的 [example_environment.py](example_environment.py) 是最小可运行例子。核心接口：
+
+```python
+from simulation import LocalEnvironment, Scenario, Source, generate
+
+case = generate(seed=20260911, layout="uniform", noise="smooth")
+env = LocalEnvironment(case)
+feedback = env.act({"kind": "measure", "position": (0.0, 0.0), "channel": 1})
+```
+
+- 动作 `kind` 为 `measure` 或 `clear`；`position` 是 `(x, y)`，单位米；`channel` 是1—20的整数。
+- 检测返回 `measure_result`：`no_signal`、`near` 或 `direction`。最后一种另有 `svd_deg`，单位度，正东为0度、逆时针增加。
+- 清除返回 `clear_result`：`success` 或 `no_target_in_range`。
+- 每次返回包含 `accepted`、累计 `virtual_time_s` 和本次 `costs`。
+- `env` 持有源真值，仅供环境和审计使用。公平比较时，策略只接收反馈和公开条件，不能读取 `env.sources`、`env.scenario` 或案例真值。
+- `Scenario.to_dict()` / `Scenario.from_dict()` 支持保存、加载同一案例；固定案例、误差类型和种子后，同一动作序列得到同一反馈及虚拟耗时。
+
+接入现有状态时，按 `policy.choose(state)` → `env.act(action)` → `state.update(action, feedback)` 循环。可参考 [run_local.py](run_local.py)；完整结束还必须检查实际全部清除，不能只比较未完成局的较短耗时。
+
+## 规则与边界
+
+| 项目 | 当前实现 |
 |---|---|
-| `geometry.py` | 外包圆、多边形裁剪、误差扇形、包围圆、参照点 |
-| `simulation.py` | 自建环境、固定误差场、精确计费；持有真值 |
-| `state.py` | 策略可见信息及测试用真值审计；策略不调用审计 |
-| `policy.py` | 候选、频道批次、可靠清除和共享参考完成 |
-| `run_local.py` | 分阶段案例、完整执行、动作流水、参数与源代码快照 |
-| `test_core.py` | 可手算与解析边界条件检查 |
-| `summarize.py` | 冻结检查、流水重算、独立案例结果汇总 |
+| 初始位置和测向频道 | `(0, 0)`、频道1 |
+| 移动 | 欧氏距离 ÷ 5 m/s |
+| 检测 | 5秒；仅检测换频道时另加1秒 |
+| 清除 | 成功5秒、失败3秒；不改变测向频道 |
+| 接收、近距离、清除边界 | 距离分别不超过该源半径、5米、20米，边界包含 |
+| 生成案例 | 10—16个不同频道全向源；位置在半径1800米圆内；接收半径1000—1500米 |
+| 布局 | `uniform`、`edge`、`cluster`、`line`，属于团队测试设定 |
+| 固定误差场 | `zero`、`smooth`、`biased`、`hashed`；由位置、频道、种子确定 |
+| 角度输出 | 加入±1度内自建误差后舍入两位小数，总偏差可能达到1.005度；策略额外保留舍入余量 |
 
-## 本轮留存的阶段
+低层 `LocalEnvironment` 允许少量源构造单元测试，不负责完整校验自定义场景是否符合整局题面；调用方须检查源数、坐标、半径、频道和方向。问题3驱动拒绝定向源；环境虽有半圆接收几何，不能据此声称已经交付第四问完整求解。
 
-- `runs/smoke/`：最初开发记录，随后修复过定位收益重复计分、参考收尾目标间切换；不是当前版本证据。该早期运行尚未启用源代码快照。
-- `runs/smoke_checked/`：修复后 4 个冒烟案例，双模式。
-- `runs/development/`：12 个开发案例，双模式。
-- `runs/holdout/`：冻结核心代码和参数后的 24 个不同种子案例，双模式；本轮判断主要依据。
+此接口是进程内 Python 字典接口，不实现 HTTP、登录、请求编号/重试、服务器超时或界面倒计时。现实运行时间与虚拟计费分开记录。
 
-一旦针对独立案例反例继续调策略，这些案例转为开发资料，下轮需另外留出测试案例。24 局不是稀有失败概率证明；本地模型正确性、策略效率和官方迁移是不同结论。
+七点扫描保证发现覆盖，不保证第一阶段把全部源缩到20米或60米内。两阶段策略随后仍可能补测、试清；路径优化针对当时估计位置，不等于未知真值下的全局最优。
 
-检查留存：[15 项单元检查](VALIDATION.txt)、[冻结代码与计时账核对](runs/holdout/analysis.json)、[固定散列误差案例的确定性重放](runs/holdout/replay_check.json)。重放的动作 JSONL 与原记录逐字节一致，非现实耗时指标一致；现实耗时不要求相同。
+## 文件和输出
+
+- 本目录：`simulation.py` 环境与案例生成；`geometry.py` 几何；`state.py` 信息状态；`policy.py` 基础策略；`run_local.py` 整局运行；`test_core.py` 15项检查。
+- `../b_benchmark_scale/`：`two_stage.py` 两阶段策略、`run_two_stage.py` 批量比较、`test_two_stage.py` 3项检查。
+- `../b_overnight/task_cost.py`：两阶段策略的局部补测/清除依赖。
+- `../b_oracle_q3/oracle.py`：路径动态规划依赖；其中旧离线报告的独立 `main()` 需要历史实验产物，本交付不使用该入口。
+- `../b_overnight/runs/q3_sweep_validation/cases.json`：12个自建案例，供 `--stage replay` 读取，非官方隐藏案例。
+
+运行结果包含 `cases.json`、`results.json`、`RESULTS.md`、逐动作 `actions/*.jsonl` 和代码/参数哈希；两阶段还保存 `plans/`。运行目录中的 `source/` 为审计快照，日常修改应修改上述源文件。新运行结果统一写入 `outputs/experiments/<实验目录>/<run-id>/`，默认被根目录 `.gitignore` 忽略，避免误交大量产物。
+
+团队比较建议使用同一批案例，先检查全清，再比较每局 `虚拟总秒数 / 源数`。新方法修改后必须重新运行，不能混用旧代码结果。

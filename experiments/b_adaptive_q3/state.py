@@ -156,4 +156,3 @@ def audit_state(state, environment):
     if state.complete:
         assert len(environment.cleared) == len(environment.sources), "提前结束"
     assert abs(state.virtual_time_s - environment.virtual_time_s) < 1e-6
-
