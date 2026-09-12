@@ -1,0 +1,25 @@
+{
+  "label": "两次垂直方向测向交会",
+  "observations": [
+    {
+      "position_m": [
+        -500.0,
+        0.0
+      ],
+      "bearing_deg": 0.0
+    },
+    {
+      "position_m": [
+        0.0,
+        -500.0
+      ],
+      "bearing_deg": 90.0
+    }
+  ],
+  "source_m": [
+    0.0,
+    0.0
+  ],
+  "reception_radius_m": 1100.0,
+  "origin": "自建解析算例；非官方案例。source_m 仅用于事后验证，不传给求解器。"
+}

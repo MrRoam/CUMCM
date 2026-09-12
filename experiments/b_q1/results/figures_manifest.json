@@ -1,0 +1,13 @@
+{
+  "generated_at_utc": "2026-09-11T05:11:41.066744+00:00",
+  "python": "3.7.0",
+  "matplotlib": "2.2.3",
+  "input_sha256": "c4ebaeb3a2b850288e1cda605bdd25dbeb26a87c7b05c26be6443a81b236e7bf",
+  "script_sha256": "9ecb5f633dd2d99409e7b848666fc42ac47ac00d7045709a2e9319072026ca6f",
+  "files_sha256": {
+    "figures/intersection_and_diameter.png": "7803d72b672595fb301221fba79a8b11447388412613268a3d43e4fa58b7e0fd",
+    "figures/intersection_and_diameter.svg": "6ca3ec15f13399db7e336364ebb21c3c5709672726f8fd2176bb727d9cc49001",
+    "figures/diameter_circle_counterexample.png": "1386d0f2e81eaea3228e13ec3ce74b5b06f3aa9d9b1ab93ae5c73785aa3ce3d7",
+    "figures/diameter_circle_counterexample.svg": "233b4e793122c802b08e5a80ded12274162e27c1299be8cc15d2f0edde0c68d8"
+  }
+}
