@@ -1,0 +1,287 @@
+{
+  "unit_tests": 72,
+  "historical_replay": {
+    "cases": 24,
+    "runs": 96,
+    "actions": 17421,
+    "means_min": {
+      "fixed": 58.16008575569811,
+      "position": 56.5132003481314,
+      "joint": 56.474669948706016,
+      "baseline": 63.61564023572192
+    }
+  },
+  "output_rejections": 4,
+  "fresh_runs": 8,
+  "scope": "AI自动核验；自建环境，不代表官方成绩或团队人工核验",
+  "pr": 9,
+  "reviewed_head": "d3ef0e09f3f290e8a6322c437fc06098115278ed",
+  "base_commit": "8511f8b",
+  "date": "2026-09-12",
+  "command": "python experiments/b_q3/review_pr9.py --out outputs/experiments/b_q3/pr9_final_validation",
+  "tests": [
+    {
+      "file": "experiments/b_q3/adaptive_second/test_adaptive.py",
+      "exit_code": 0,
+      "tests": 8,
+      "output": "........\n----------------------------------------------------------------------\nRan 8 tests in 7.901s\n\nOK\n"
+    },
+    {
+      "file": "experiments/b_q3/adaptive_second/test_online.py",
+      "exit_code": 0,
+      "tests": 1,
+      "output": ".\n----------------------------------------------------------------------\nRan 1 test in 0.798s\n\nOK\n"
+    },
+    {
+      "file": "experiments/b_q3/adaptive_second/test_posterior_edges.py",
+      "exit_code": 0,
+      "tests": 3,
+      "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.075s\n\nOK\n"
+    },
+    {
+      "file": "experiments/b_q3/belief_tree/test_belief.py",
+      "exit_code": 0,
+      "tests": 8,
+      "output": "........\n----------------------------------------------------------------------\nRan 8 tests in 1.155s\n\nOK\n"
+    },
+    {
+      "file": "experiments/b_q3/belief_tree/test_macro.py",
+      "exit_code": 0,
+      "tests": 3,
+      "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.135s\n\nOK\n"
+    },
+    {
+      "file": "experiments/b_q3/boundary_penalty/test_boundary.py",
+      "exit_code": 0,
+      "tests": 2,
+      "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 56.238s\n\nOK\n"
+    },
+    {
+      "file": "experiments/b_q3/clearability/test_activation.py",
+      "exit_code": 0,
+      "tests": 2,
+      "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 55.715s\n\nOK\n"
+    },
+    {
+      "file": "experiments/b_q3/clearability/test_policy.py",
+      "exit_code": 0,
+      "tests": 5,
+      "output": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.391s\n\nOK\n"
+    },
+    {
+      "file": "experiments/b_q3/decision_pilot/test_model.py",
+      "exit_code": 0,
+      "tests": 2,
+      "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.097s\n\nOK\n"
+    },
+    {
+      "file": "experiments/b_q3/probability_patrol/test_belief.py",
+      "exit_code": 0,
+      "tests": 9,
+      "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.205s\n\nOK\n"
+    },
+    {
+      "file": "experiments/b_q3/probability_patrol/test_validation.py",
+      "exit_code": 0,
+      "tests": 17,
+      "output": "test_certificate_tamper_rejected (__main__.ContinuousCoverageTests.test_certificate_tamper_rejected) ... ok\ntest_empty_scoring_grid_does_not_prove_absence (__main__.ContinuousCoverageTests.test_empty_scoring_grid_does_not_prove_absence) ... ok\ntest_free_nonanchor_cover_certifies_absence (__main__.ContinuousCoverageTests.test_free_nonanchor_cover_certifies_absence) ... ok\ntest_planned_future_scans_do_not_prove_absence (__main__.ContinuousCoverageTests.test_planned_future_scans_do_not_prove_absence) ... ok\ntest_ten_seen_does_not_imply_complete (__main__.ContinuousCoverageTests.test_ten_seen_does_not_imply_complete) ... ok\ntest_two_disks_leave_real_gap (__main__.ContinuousCoverageTests.test_two_disks_leave_real_gap) ... ok\ntest_arrival_scan_runs_at_real_clearance_position (__main__.CoveringRouteTests.test_arrival_scan_runs_at_real_clearance_position) ... ok\ntest_insertion_includes_open_end_and_two_opt_preserves_jobs (__main__.CoveringRouteTests.test_insertion_includes_open_end_and_two_opt_preserves_jobs) ... ok\ntest_no_cross_channel_negative_evidence (__main__.CoveringRouteTests.test_no_cross_channel_negative_evidence) ... ok\ntest_plan_preserves_service_and_does_not_change_real_state (__main__.CoveringRouteTests.test_plan_preserves_service_and_does_not_change_real_state) ... ok\ntest_documented_199_seconds (__main__.IndependentLedgerTests.test_documented_199_seconds) ... ok\ntest_fixed_noise_not_resampled (__main__.IndependentLedgerTests.test_fixed_noise_not_resampled) ... ok\ntest_shared_station_charges_each_channel (__main__.IndependentLedgerTests.test_shared_station_charges_each_channel) ... ok\ntest_case_splits_and_known_failure (__main__.PatrolIntegrationTests.test_case_splits_and_known_failure) ... ok\ntest_cleared_target_does_not_break_shared_queue (__main__.PatrolIntegrationTests.test_cleared_target_does_not_break_shared_queue) ... ok\ntest_initial_scan_does_not_force_origin (__main__.PatrolIntegrationTests.test_initial_scan_does_not_force_origin) ... ok\ntest_visible_snapshot_has_no_truth (__main__.PatrolIntegrationTests.test_visible_snapshot_has_no_truth) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.415s\n\nOK\n"
+    },
+    {
+      "file": "experiments/b_q3/refinement/test_refined.py",
+      "exit_code": 0,
+      "tests": 12,
+      "output": "............\n----------------------------------------------------------------------\nRan 12 tests in 1.489s\n\nOK\n"
+    }
+  ],
+  "additional_replay": [
+    {
+      "folder": "refinement/runs/micro_confirm",
+      "cases": 24,
+      "runs": 144,
+      "actions": 25700,
+      "means_min": {
+        "baseline": 64.36248814363853,
+        "current": 57.888086232252356,
+        "f1": 57.43183623225236,
+        "f2": 57.433106634342266,
+        "f3": 55.75552781526097,
+        "f4": 56.70424930024238
+      }
+    },
+    {
+      "folder": "boundary_penalty/runs/confirmation",
+      "cases": 6,
+      "runs": 12,
+      "actions": 2240,
+      "means_min": {
+        "f3": 61.24234814593378,
+        "penalty60": 61.030759568137526
+      }
+    }
+  ],
+  "entrypoint_checks": [
+    {
+      "script": "adaptive_second/run.py",
+      "rejected": true
+    },
+    {
+      "script": "refinement/run.py",
+      "rejected": true
+    },
+    {
+      "script": "refinement/postcheck.py",
+      "rejected": true
+    },
+    {
+      "script": "belief_tree/run.py",
+      "rejected": true
+    },
+    {
+      "script": "belief_tree/run_macro.py",
+      "rejected": true
+    },
+    {
+      "script": "clearability/run.py",
+      "rejected": true
+    },
+    {
+      "script": "clearability/run_revision.py",
+      "rejected": true
+    },
+    {
+      "script": "clearability/run_activation.py",
+      "rejected": true
+    },
+    {
+      "script": "boundary_penalty/run_boundary.py",
+      "rejected": true
+    },
+    {
+      "script": "boundary_penalty/run_confirmation.py",
+      "rejected": true
+    },
+    {
+      "script": "adaptive_second/demo_run.py",
+      "rejected": true
+    }
+  ],
+  "failure_check": {
+    "command": [
+      "python",
+      "experiments/b_q3/probability_patrol/runner.py",
+      "--policy",
+      "baseline",
+      "--cases",
+      "outputs/experiments/b_q3/pr9_final_validation/smoke_cases.json",
+      "--out",
+      "outputs/experiments/b_q3/pr9_expected_failure",
+      "--action-limit",
+      "1"
+    ],
+    "exit_code": 1,
+    "status": "failed",
+    "retained_failed_cases": 4
+  },
+  "tested_source_sha256": {
+    "experiments/b_adaptive_q3/example_environment.py": "6b69a9b03a496b42c28bb58c71fd117c6d43707c53b57391b3260e63e2f10979",
+    "experiments/b_adaptive_q3/geometry.py": "68a081fcaec7fc084a0293c8674c7a2fc363606058e79b44fa359ce36b4bdbaf",
+    "experiments/b_adaptive_q3/policy.py": "0885c02e697e655bca498ee0d2b88368be778fdf3a529b67432af962e5b9a05f",
+    "experiments/b_adaptive_q3/run_local.py": "3a75d7fe1df89c1fc8c99c60d1618f8483283afa2a8f47b16fef08f12597ad52",
+    "experiments/b_adaptive_q3/simulation.py": "76bc0037c08d3b2a3cc347daa8a36a6d789103d943b42afdf9d8823f974494cc",
+    "experiments/b_adaptive_q3/state.py": "87fd39637602bfe54567aaef6c07d0939c90ff23ed78d565b9b07a7bc3b23b72",
+    "experiments/b_adaptive_q3/test_core.py": "e70ebfeaf358efbf3c34a3b4a45d7acd9b16903b64ccce9cbe3ca19283037c93",
+    "experiments/b_benchmark_scale/run_two_stage.py": "c96b767f27744fc6673f8494ee12077cfeec7c1a5ae7bc1faa57b4627f92df09",
+    "experiments/b_benchmark_scale/test_two_stage.py": "4b57e99ff2521e2a69ff5f742d90942a078c38f8582062532eb19f1528d92f5e",
+    "experiments/b_benchmark_scale/two_stage.py": "37d991166fff33f772fe8a6a400a545cd89420f5654e566a93348b6d0b3d1598",
+    "experiments/b_oracle_q3/oracle.py": "1b1118bff78f46e112ff6b2a536092a8e0a33686cec6cde57d6df5c5cc3aba19",
+    "experiments/b_overnight/coverage.py": "fab46e91db92b4b7f622bbb3bcd746e5153f217158f80b4e57de38c66ddf61e8",
+    "experiments/b_overnight/sweep_policy.py": "bd7e6db2afe7d84d79d5fd64a6cb63f47cb7c8ac633a45b06a7e64a1e847dc84",
+    "experiments/b_overnight/task_cost.py": "47b20e3bff43ce86fb9d4d0ba1e795a042dea3b984887811033e09dd5c21d283",
+    "experiments/b_q3/adaptive_second/adaptive.py": "4babf97124005627dac0f06a30db43bde14651c224bcdaa74d1cc9d25e3f258f",
+    "experiments/b_q3/adaptive_second/build_demo.py": "9ca3629f8aa92d57b50302ff6fcf1ea86e080c328a865ee856f4a2a7ecdf686f",
+    "experiments/b_q3/adaptive_second/demo_run.py": "ac6bf24c8e08719de4c44ce4ee8e118055efa3fa353da5b343f35a7a0b66eb94",
+    "experiments/b_q3/adaptive_second/diagnose.py": "926a7076385c22ef7ad5c0bbb96fe4bd6d36d89e5229d486afb267dd6c15f8df",
+    "experiments/b_q3/adaptive_second/online.py": "9b04790a0f7344aeb0dfffa310ad7e4406d028b6e2a762a95d5fe7d8cd6445a0",
+    "experiments/b_q3/adaptive_second/report.py": "bf8b870d80185a8dc8879e1128b38cb3e7866bd8de4f4f43848d269793ff587b",
+    "experiments/b_q3/adaptive_second/review_findings.py": "8db3292f8882e4d89835e357e15047c338b0ce8df822e429f2993911c1140de1",
+    "experiments/b_q3/adaptive_second/run.py": "ba5d017a718b2c5a1acd2f0ef0eec707f77a07ddd4c256bb27c4d4a24bcb0e7e",
+    "experiments/b_q3/adaptive_second/sensitivity.py": "6c55678944c8fcf36d94a66d4c66e47c5d7cf00c2680698cfceb5f55373aa628",
+    "experiments/b_q3/adaptive_second/test_adaptive.py": "2bff76b89725c4ddecebcee5940c5d42460dfad2312a83493b58bebd9f8cff10",
+    "experiments/b_q3/adaptive_second/test_online.py": "1b7a61642b8cd6848eec25cceeb7c27a4a1953c4eb4906cba1fb18d209a47299",
+    "experiments/b_q3/adaptive_second/test_posterior_edges.py": "02cd2493607a02e1127ee6c5763474412db65b4f6b26934fa244d0f24e6e7246",
+    "experiments/b_q3/belief_tree/audit.py": "b7ca63d3fa24792f83cc5d5f47bb66dea0d37e6a9e8547642e6f9e3741c224fc",
+    "experiments/b_q3/belief_tree/compare.py": "0cfd5a6ac61b80c7183570e3db003b6c6e36ef83802c361d9927ae9ecb6e19de",
+    "experiments/b_q3/belief_tree/diagnose.py": "ecccdb80b832a42e535eba0ff4e37fd94c7d8b74b2130219303813a51eed8152",
+    "experiments/b_q3/belief_tree/macro_planner.py": "8f95027ac7331ba66c2037f87d9b095ef965ff486b839853d5781095917d8b9b",
+    "experiments/b_q3/belief_tree/particle_belief.py": "52a57494135ad9656893a8fe320e8172814f0aad2b5bb73a2b001f6a3a3dd396",
+    "experiments/b_q3/belief_tree/planner.py": "eca5dbe093c3d4be8df0f6f7a04479f85624a4a89dea3acfc94b611fd1c6ef01",
+    "experiments/b_q3/belief_tree/run.py": "8a8228f327dbd374f2a1e6295fa10da818994cf9a0bac167d8206c8efb19a94a",
+    "experiments/b_q3/belief_tree/run_macro.py": "4a4ca60ecf195cdd73d8181caf07f318e91c2f8223de16337a4b691887da31f7",
+    "experiments/b_q3/belief_tree/synthesis.py": "5948ef797358f9045294e2ad96e1fa8cd965f07b7f2353687051d051ffd89fe4",
+    "experiments/b_q3/belief_tree/test_belief.py": "cbbc0500d963f8ab20fb395e5e5f6451ffdefd0a2122a52e7dc3418492a1df9c",
+    "experiments/b_q3/belief_tree/test_macro.py": "69c1b0633a9d14e0b119d62351c8adfa308e6d996dfcebdc2c5d4a7a6cab13d9",
+    "experiments/b_q3/boundary_penalty/boundary_policy.py": "37c0f3e2f728c6f7209d0629d6c36bce971af2d4dffc6110fe6f4ec2d031f658",
+    "experiments/b_q3/boundary_penalty/build_report.py": "9474d27d2fb9a86b22cc80a9eabf96e6ba572b940ec34db7b17ff48305ca8c93",
+    "experiments/b_q3/boundary_penalty/run_boundary.py": "f8628ceb97d25b7a02c17dea96c0675d0e1e5dca5e94d5258947f96c860bb124",
+    "experiments/b_q3/boundary_penalty/run_confirmation.py": "32a7fd7fa79067112c79d8495bde0546a70fe777884bc70e0cc8825b8897628d",
+    "experiments/b_q3/boundary_penalty/summarize.py": "4c273e3728dafe5b4fed1b67c72f78552e3fd6b78e576b56c980f87ddddbd3b2",
+    "experiments/b_q3/boundary_penalty/test_boundary.py": "9711a125b9edea2ffeea56882c5fed135578dbe785df553f4e3636b21207f55d",
+    "experiments/b_q3/clearability/activation_only.py": "a14e423364e688a403e65070fef918881cc01a5ea92c8bb26d1a0792b83243f4",
+    "experiments/b_q3/clearability/channel_route.py": "24a17333d27a1a7df410395ed1bc2866651332040e53d11f3a25dfaa5bf75d81",
+    "experiments/b_q3/clearability/diagnose_requested.py": "84982c784a44525e50c49af4084662bad68e5ab10468e41f2a2491cd27ba2faf",
+    "experiments/b_q3/clearability/policy.py": "ef4f8bda757c557dbd2f93e4468e19dcee77e84b3edc17202527d8f4316dd0e6",
+    "experiments/b_q3/clearability/revision.py": "1828543dd854b6261481ac55bb9d6432a157aec4e910ccc428ee54e4f6cc6120",
+    "experiments/b_q3/clearability/run.py": "4c5ed2df54ae2c972de198555864d3eb5dc1dab416e4071d963106f4d2bf2eb6",
+    "experiments/b_q3/clearability/run_activation.py": "6294cf94d4722bfe3685c461e7bea91fa9163fcf14e884ea1f3c15ca3d92217e",
+    "experiments/b_q3/clearability/run_revision.py": "8c6b751168b9264b4e80301413b21ec3b667a583ce8ac40d5bd6980a8d54ea2a",
+    "experiments/b_q3/clearability/summarize.py": "0787283dae91ee8dc08daad3707ed853f7f4a769c30e5320d5d00a4083a369d8",
+    "experiments/b_q3/clearability/summarize_activation.py": "dd19864d3ffed42f6dbf20a066e12f6ff8799f04b9f31846472e1444f1f97b31",
+    "experiments/b_q3/clearability/test_activation.py": "8b7e57742412e71fa27f928e9c8cbe3f244c31e21f4f395a646431b2f37e2d2e",
+    "experiments/b_q3/clearability/test_policy.py": "0904e71cf0c9d802c478a9d824c1d6ec37ef639272b59757538f4ceff588cb67",
+    "experiments/b_q3/cross_method/AI1_optimization_summary_20260912/rebuild_metrics_AI1.py": "e0184db99939e9acd03f47dee6df3774e07e06ad0ba5740bb9cc96a7abe6812f",
+    "experiments/b_q3/cross_method/AI2_optimization_summary_20260912/rebuild_metrics_AI2.py": "33fe719b2f5bfc4cfb85e291d5f884c55b05b9e8c107f58cbcc027fdc5533be4",
+    "experiments/b_q3/cross_method/AI3_optimization_summary_20260912/rebuild_metrics_AI3.py": "0e0066b6f0d286791b4b10330615f53fe26ae19093798d59168d1842888104e0",
+    "experiments/b_q3/cross_method/summarize_per_source.py": "6855a0e08ec393dd742f0c4ed23166b90cb9975f92f5ea3935874b352062a555",
+    "experiments/b_q3/decision_pilot/build_handoff.py": "b8889aaab19b182e2b1f1c2ec03e125f81e1f30178e7fc3d7cc47aefc7f89d46",
+    "experiments/b_q3/decision_pilot/export_stepwise.py": "f26935a9cd1969f6b782bc64e521ebf56671631fc5ee6d1452c3030b4c915eb3",
+    "experiments/b_q3/decision_pilot/model.py": "0dcef293f1daf6e10f6e296522db07a7dc870a095597b2684dd7579be17bfa51",
+    "experiments/b_q3/decision_pilot/run.py": "79b3ff333863cf57f70f49ba804927023511a48452f5f0d1c215b9ee7055662e",
+    "experiments/b_q3/decision_pilot/test_model.py": "26b2bd007a0eb7ff0977aa3ee9fcea156c3f4b8f3400c12adb0193b45bd6f181",
+    "experiments/b_q3/decision_pilot/verify_report.py": "f47e794533679e844d9f3d5d9812acd2b8309db20659f1b871ee2f9ed64639cd",
+    "experiments/b_q3/legacy_baseline/audit_recorded_practice.py": "784bc054707422a1eb851db58cdfddd3254303028a82465d6ad99cfc5b86b017",
+    "experiments/b_q3/probability_patrol/belief.py": "d769f28cd3c4e65b8acd663981953d067cbc22331438ae339a1faa84767160b3",
+    "experiments/b_q3/probability_patrol/coverage_state.py": "f873d02cf1240192e18966fd21755691112d25fbce0f8a03d64a8efd66b5d368",
+    "experiments/b_q3/probability_patrol/covering_route.py": "6d0a8283ec97e9fff888eab622e7a09f2ae810ae8e9f83110fbbe4a58363ac8f",
+    "experiments/b_q3/probability_patrol/initial_design.py": "70c918e16ace9a9e81b4ea190cfe9cb0bc4eb384866d2953e4470cb96e6c8599",
+    "experiments/b_q3/probability_patrol/patrol.py": "46a04c815eabf57cfda07c686842777132de3f72a6950b3b70102ec2000b41e6",
+    "experiments/b_q3/probability_patrol/runner.py": "99e0e69833f4316dd2c396a17343abb32e375a4029d9900dcef707f64e09e14b",
+    "experiments/b_q3/probability_patrol/summarize.py": "967c83992df6599d477ccdf560701f7abf66eb366c6e4f3142ad999ff834edb0",
+    "experiments/b_q3/probability_patrol/test_belief.py": "374b13269f49cbc127323c5dca92ee671ce6c6e9edc0a3c45172fa3ced9d781e",
+    "experiments/b_q3/probability_patrol/test_validation.py": "37f37e8ace0ff93a87053d8c1f2073fd24fd684d9df7183f3b9132b54e7dd080",
+    "experiments/b_q3/refinement/analyze.py": "083eecb5dd730e4970057cfb74027ca0348263c2e1de89f8723e9f93fb9c457d",
+    "experiments/b_q3/refinement/audit_trace.py": "918d3ef2601cbb31216405a70aeb5d361b820f93bf4f5ae47cff06c215b5193b",
+    "experiments/b_q3/refinement/build_replay.py": "20815722e77a92fd18a407afecceb7c9d18a05624075dc1c1f043c8971580c2e",
+    "experiments/b_q3/refinement/demo_f3.py": "0b06680c615fff9b5e60263c0350d77e30b8f8a663547ba953176a1bd24784b6",
+    "experiments/b_q3/refinement/finish_demo_f3.py": "59c0913bb09a423cbebbbb0b8f3bab1fb185c07d7283f566fa520849828d1522",
+    "experiments/b_q3/refinement/incremental.py": "6747ec88453d570315751399247b144983f0d61eec103be6f4496094c67c0f8c",
+    "experiments/b_q3/refinement/initial_audit.py": "bbd5bd496f99aadf42b416e723cee947cad56cd2213ce499571788b09b0dd72c",
+    "experiments/b_q3/refinement/postcheck.py": "395fc6a92f8df6c240dbb53a9518797df5040ce9c96ed1be79f70b21ed4b8db3",
+    "experiments/b_q3/refinement/posterior.py": "8981374013fb530d754a8115847f89c37388d5a5f850c667d8008d8bfd79428c",
+    "experiments/b_q3/refinement/random_review.py": "cd0ff5146a7a8701c737647cdc81b9016661b2e1717e5dde312c80fc36ed88bf",
+    "experiments/b_q3/refinement/refined.py": "08fa7106993be820cc440e572ca4e5787ffae4ee199dd1ced59226d3b95dd2cd",
+    "experiments/b_q3/refinement/report_results.py": "35cbb8e9f0b4a7958646b1d5ed2a9539267c00f4482c1a9e9fa8276e4071be2b",
+    "experiments/b_q3/refinement/run.py": "8f745bc1285d1da574037f581543743888f325ec2903e7e3273e124e8df2b4e5",
+    "experiments/b_q3/refinement/test_refined.py": "b0b9b99f2a9149bbc76eb8cf7c2f6a8922b42b2ce500b9bf4f9db407d08eb4c9",
+    "experiments/b_q3/refinement/validation_receipt.py": "406fe8c6c757aad51142a60e680eabc4fbcb6661a4ece86ad1916b2b37d37eca",
+    "experiments/b_q3/refinement/verified.py": "5ef6e7e81e31359d595efcbb521cac52a482d5c257327cb54289a13a797953f3",
+    "experiments/b_q3/refinement/verify_filters.py": "d95989ee64624fc81c164a0ba6b30659523c1eee014821084c1849cdb581287c",
+    "experiments/b_q3/review_pr9.py": "9e6bddbfd380c55dea097440711f3e2abb87267ff952bc8d5b853bf2d91b6679"
+  },
+  "post_test_changes": "三个演示/决策入口仅追加完成状态记录，另作语法核验；文档、索引和性能剖析元数据清理不影响主测试算法。",
+  "whitespace": "原始 PR 的历史对话、快照等存在空白告警，保留原证据；审查修复差异单独检查。",
+  "existing_environment_tests": {
+    "command": "python experiments/b_adaptive_q3/test_core.py",
+    "tests": 15,
+    "exit_code": 0
+  }
+}
